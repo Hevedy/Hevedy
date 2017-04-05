@@ -1,11 +1,11 @@
 /* Icon font - MFG labs */
 @font-face {
   font-family: 'mfg';
-    src: url('../font/mfglabsiconset-webfont.eot');
-    src: url('../font/mfglabsiconset-webfont.svg#mfg_labs_iconsetregular') format('svg'),
-   		   url('../font/mfglabsiconset-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/mfglabsiconset-webfont.woff') format('woff'),
-         url('../font/mfglabsiconset-webfont.ttf') format('truetype');
+    src: url('../media/fonts/mfglabsiconset-webfont.eot');
+    src: url('../media/fonts/mfglabsiconset-webfont.svg#mfg_labs_iconsetregular') format('svg'),
+   		   url('../media/fonts/mfglabsiconset-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../media/fonts/mfglabsiconset-webfont.woff') format('woff'),
+         url('../media/fonts/mfglabsiconset-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
