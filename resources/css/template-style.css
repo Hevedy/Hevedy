@@ -1,5 +1,5 @@
 body {
-	background: url("../img/background.jpg") no-repeat fixed center center / 100% auto rgba(56, 18, 82, 0);
+	background: url("../media/images/Background.jpg") no-repeat fixed center center / 100% auto rgba(56, 18, 82, 0);
 }
 nav {
 	background: none repeat scroll 0 0 rgba(56, 18, 82, 0);
@@ -56,7 +56,11 @@ nav ul li ul li {
 #fourth-block p {
 	color: #fff;
 }
-#first-block, #second-block, #third-block, #fourth-block {
+#first-block, #second-block, #fourth-block {
+	text-align: center;
+	padding: 4.5rem 0;
+}
+#third-block {
 	text-align: center;
 	padding: 4.5rem 0;
 }
@@ -104,7 +108,7 @@ footer p, footer a:link, footer a:visited, footer a:hover {
 	padding: 0.625rem 0.8rem;
 }
 #first-block i {
-	background: none repeat scroll 0 0 #2fcbe0;
+	background: none repeat scroll 0 0 #6600aa;
 	border-radius: 100px;
 	color: #fff;
 	display: block;
@@ -151,7 +155,7 @@ a.button {
 	text-transform: uppercase;
 }
 #head {
-	background: none repeat scroll 0 0 rgba(0, 30, 34, 0.85);
+	background: none repeat scroll 0 0 rgba(56, 18, 82, 0.85);
 	padding: 9rem 0 5rem;
 	text-align: center;
 }
@@ -168,7 +172,7 @@ a.button {
 	text-transform: none;
 }
 .content-block {
-	background: none repeat scroll 0 0 rgb(0, 30, 34);
+	background: none repeat scroll 0 0 rgb(56, 18, 82);
 	padding: 2.5rem;
 }
 .content-block h3 {
@@ -188,7 +192,7 @@ a.button {
 	font-style: normal;
 }
 .contact-page i {
-	background: none repeat scroll 0 0 rgb(0, 30, 34);
+	background: none repeat scroll 0 0 rgb(56, 18, 82);
 	border-radius: 100px;
 	display: inline-block;
 	height: 35px;
@@ -198,7 +202,7 @@ a.button {
 	width: 35px;
 }
 form.customform button {
-	background: none repeat scroll 0 0 rgb(0, 30, 34);
+	background: none repeat scroll 0 0 rgb(56, 18, 82);
 	border-radius: 5px;
 	transition: background 0.20s linear 0s;
 	-o-transition: background 0.20s linear 0s;
