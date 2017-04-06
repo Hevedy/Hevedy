@@ -41,7 +41,7 @@
                   <ul class="s-12 l-2">
                      <li class="logo hide-s hide-m">
                         <a href="index.html"><img src="resources/media/images/Logo_Main.png" alt="" style="position: absolute; top: 0%; left: 50%; transform: translate(-50%, 10%)">
-						<br /><br /><br /><strong>HEVEDY</strong></a>
+						<br /><br /><br /><br /><strong style="position: absolute; top: 0%; left: 50%; transform: translate(-50%, 200%)">HEVEDY</strong></a>
                      </li>
                   </ul>
                   <div class="top-nav s-12 l-5">
@@ -172,19 +172,19 @@
                </p>
                <div class="margin">
                   <div class="s-12 m-6 l-4">
-                     <img src="resources/media/images/Image01.jpg" alt="for the wind">  
+                     <a href="games/forthewind.html" target="_blank"><img src="resources/media/images/Image01.jpg" alt="for the wind"></a>
 						<h3>For The Wind</h3>
                      <p class="subtitile">
                      </p>
                   </div>
                   <div class="s-12 m-6 l-4">
-                     <img src="resources/media/images/Image02.jpg" alt="image tools">   
+                     <a href="https://hevedy.itch.io/imagetools" target="_blank"><img src="resources/media/images/Image02.jpg" alt="image tools"></a>
 						<h3>Image Tools</h3>
                      <p class="subtitile">
                      </p>
                   </div>
                   <div class="s-12 m-6 l-4">
-                     <img src="resources/media/images/Image03.jpg" alt="image tools">   
+                     <a href="https://hevedy.itch.io/purpleprintkit" target="_blank"><img src="resources/media/images/Image03.jpg" alt="purpleprint"></a>
 						<h3>Purpleprint Kit</h3>
                      <p class="subtitile">
                      </p>
@@ -217,11 +217,12 @@
       <script type="text/javascript">
          jQuery(document).ready(function($) {  
            $("#owl-demo").owlCarousel({
-           	slideSpeed : 300,
+           	slideSpeed : 350,
            	autoPlay : true,
            	navigation : false,
            	pagination : false,
-           	singleItem:true
+           	singleItem:true,
+			transitionStyle:"fade"
            });
            $("#owl-demo2").owlCarousel({
            	slideSpeed : 300,
