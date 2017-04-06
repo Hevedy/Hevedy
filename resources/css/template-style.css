@@ -19,7 +19,7 @@ nav {
 	width: 100%;
 }
 .top-nav li a {
-	font-size: 0.9rem;
+	font-size: 1.0rem;
 	text-transform: uppercase;
 }
 .top-nav .logo a, .top-nav .logo.active-item a {
@@ -133,7 +133,7 @@ section h3 {
 	text-transform: uppercase;
 }
 section p {
-	font-size: 0.8rem;
+	font-size: 1.0rem;
 }
 section h1 {
 	color: #fff;
@@ -149,7 +149,7 @@ a.button {
 	border: 0 none;
 	border-radius: 5px;
 	color: rgb(0, 30, 34);
-	font-size: 0.8rem;
+	font-size: 1.0rem;
 	font-weight: 600;
 	padding: 0.625rem;
 	text-transform: uppercase;

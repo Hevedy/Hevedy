@@ -12,11 +12,13 @@
 }
 body {
   background:none repeat scroll 0 0 #d3d3d3;
-  font-size:16px;
-  font-family:"Open Sans",Arial,sans-serif;
+  font-size:16px; /* 16px */
+  font-family:"Share Tech",Arial,sans-serif;
   color:#444;
 }
 h1,h2,h3,h4,h5,h6 {
+  font-size:16px;
+  font-family:"Orbitron",Arial,sans-serif;
   color:#152732;
   font-weight: normal;
   line-height: 1.3;
