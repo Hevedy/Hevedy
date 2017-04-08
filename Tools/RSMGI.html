@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Hevedy - Tools</title>
+	<link rel="icon" type="image/png" href="../resources/media/images/WebIcon.png">
+	<link rel="stylesheet" href="../resources/css/components.css">
+	<link rel="stylesheet" href="../resources/css/icons.css">
+	<link rel="stylesheet" href="../resources/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../resources/css/responsee.css">
+	<link rel="stylesheet" href="../resources/css/template-style.css">
+	<link rel="stylesheet" href="../resources/css/fonts-manager.css">
+	<script type="text/javascript" src="../resources/js/jquery-3.2.0.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
+</head>
+<body class="size-1140">
+<!-- TOP NAV WITH LOGO -->
+<header>
+	<nav>
+		<div class="line">
+			<div class="top-nav">
+				<div class="logo hide-l">
+					<a href="index.html"><strong>HEVEDY</strong></a>
+				</div>
+				<p class="nav-text">Menu</p>
+				<div class="top-nav s-12 l-5">
+					<ul class="right top-ul chevron">
+						<li>
+							<a href="../index.html">Home</a>
+						</li>
+						<li>
+							<a href="../Games/index.html">Games</a>
+							<ul>
+								<li>
+									<a href="../Games/ForTheWind.html">For The Wind</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<ul class="s-12 l-2">
+					<li class="logo hide-s hide-m">
+						<a href="../index.html">
+							<img src="../resources/media/images/Logo_Main.png" alt="" style="position: absolute; top: 0%; left: 50%; transform: translate(-50%, 10%)">
+							<br /><br /><br /><br /><strong style="position: absolute; top: 0%; left: 50%; transform: translate(-50%, 200%)">HEVEDY</strong>
+						</a>
+					</li>
+				</ul>
+				<div class="top-nav s-12 l-5">
+					<ul class="top-ul chevron">
+						<li>
+							<a href="Tools/index.html">Tools</a>
+							<ul>
+								<li>
+									<a href="ImageTools.html">Hevedy - Image Tools</a>
+								</li>
+								<li>
+									<a href="Purpleprint.html">Purpleprint Kit</a>
+								</li>
+								<li>
+									<a>Others</a>
+									<ul>
+										<li>
+											<a href="RSMGI.html">RSMGI (Concept)</a>
+										</li>
+										<li>
+											<a href="https://github.com/Hevedy/Legacyard" target="_blank">Legacyard</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a>About</a>
+							<ul>
+								<li>
+									<a>Contact</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>
+<section>
+<!-- FIRST BLOCK -->
+<div id="head">
+	<div class="line">
+		<h1>Simple Managed Global Illumination (RSMGI) (Concept)</h1>
+	</div>
+</div>
+<div id="content">
+	<div class="line">
+	<h2>Real-time Simple Managed Global Illumination</h2><br>
+	<p class="s-12 m-12 l-8 center">
+	&bull; Real-time Direct & Indirect (Shadows, Ambient Occlusion and Penumbras).<br>
+	&bull; Artist Defined Light (Color Bounces, Light Sources and Light Zones).<br>
+	<br>
+	&bull; Primary & Secondary Screen Space Ambient Occlusion.<br>
+	&bull; Directional Light and Point & Spot Lights.<br>
+	&bull; Light Portals.<br>
+	&bull; Light Zone Volumes.<br>
+	</p>
+	<br><h2>Introduction</h2><br>
+	<p class="s-12 m-12 l-8 center">
+	This concept is based in the well know Global illumination techniques with the main difference of this techinique only calculates in realtime the shadows and light occlusion aswell the penumbras in the world. The light color bleeding should be added by the artist in the final step.
+	The main objective is end with the planar light in the game engines with a low cost Global illumination solution.
+	</p>
+	<br><h2>Components</h2><br>
+	<p class="s-12 m-12 l-8 center">
+	&bull; <strong>Directional Light (Direct Sun Light):</strong> Should project a high intensity color to simulate the sun, doing a real sun study we can notice the sun is more intense at morning and middle day, note that at do the work.<br>
+	&bull; <strong>Spot & Point Lights (Indirect Light Color Bounces):</strong> We need add a "Bool" option to all the lights, this Bool will be used later to define if the light sources will affect the generated Ambient Occlusion map or not.<br>
+	&bull; <strong>Light Portals (Light Leak Reference + Light Rays Source + Outdoor Occlusion):</strong> This ones are used to define over the world the light leak points, for example if you make a house with windows, you place one "Light Portal" per window. The "Light Portals" should be editable in scale aswell rotation and location, 
+	the "Light Portals" have a secondary function too, they should have a "Bool" option to cast volumetric light rays based in their shape aswell their sub settings to configure it per "Light Portal". All the "Light Portals" in the world read the "Directional Light" direction/rotation directly or with a manager.
+	</p>
+	<br><h2>Concept:</h2><br>
+	<p class="s-12 m-12 l-8 center">
+	The sun light is defined with the Directional Light, this projects only direct light to the world. Each Light Portal in the world read the sun rotation and calculates per instance the intensity of the sun in the zone, after that render the outdoor occluder, this one don't have any effect over the world other than give the user the effect of darker zones in the indoors (is not visible from indoor to outdoor or close distances), this actor calculates too per instance the percentage of sun rays and render it using as reference the bool. Depending of the percentage of light in each portal it contributes to the scene light (with an actual light or removing shadow zones from the AO map).<br>
+	The light volume zones cover indoors and chan change the player parameters in the vision of the zone (intensity, color range...). Then the point lights or spot lights can give light in the zones where was placed over the map to simulate GI color bounces, aswell the light portals can spawn it as before we wrote if are needed.<br>
+	All this logic can be managed with a time of day system, divide the system in 4 or 6 ranges, and setup per range into an array the color, intensity and rotation of the indirect light bounces. Each range in the time of day is used using as reference the hour of the day, aswell the sun have too configuration following this guide.<br>
+	<br>
+	In the last steps of the guide is needed to make a new total engine funtion to calculate the light, you can choose the simple way or advanced way, the difference between is the first one don't need edit the engine at all.
+	</p>
+	<br><h2>Simple:</h2><br>
+	<p class="s-12 m-12 l-8 center">
+	If you don't want or just don't know how make the new shaders and manage the whole system far of the described part before, you can choose this way, but the results will be limited.<br>
+	You need to create a secondary Directional Light, this one need a new engine function to don't cast shadows, this directional light is projected in the inverted way of the sun, need to be updated each time the main sun moves.<br>
+	You will need to manage the indoors light intensity too and probably you can make use of negative lights too for dark zones.<br>
+	<br>
+	Note: The materials in the engine can be used to inject planar light colors with shapes, but this will overload overall the materials.
+	</p>
+	<br><h2>Advanced:</h2><br>
+	<p class="s-12 m-12 l-8 center">
+	At this point we need a actor that manages the before parameters, plus a new actor that acts like Global Illumination light manager, this will cast the indirect light to the whole map and will generate our "Ambient Occlusion" system.<br>
+	This is the core idea of the whole system a shader should cover the whole world reading the sun direction and allowing to set a base color for ambient color and intensity aswell the minimal and maximum intensity of the light only in white to black mask, the portal lights can affect the scale in the indoors.<br>
+	The shader should read this actor aswell the directional light of the sun and pointlights/spotlights and check the prior created bool to affect this channel or not.<br>
+	<br>
+	The shader have to calculate the penumbras in dark zones non directly affected by sun or close to it aswell in the indoors. This shader can do a simulation of the sunlight rotation in 4 directions (Up,Down,Right,Left) of the original location, to detect close faces to the light where the light keep intense.
+	</p>
+	
+	<p class="s-12 m-12 l-8 center"><br><br><br>
+	This article aswell the images are under the license <a href="https://creativecommons.org/licenses/by-sa/4.0/" title="License">Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)</a> made by Hevedy. Feel free to use this concept while you give credit to the original author <a href="https://twitter.com/Hevedy" title="Twitter">Hevedy</a>.
+	</p>
+	</div>
+</div>
+<!-- FIRST BLOCK -->
+</section>
+<!-- FOOTER -->
+<footer>
+<div class="line">
+	<div class="s-12 l-6">
+		<p>
+			<br>2017 Rights Reserved. Website by <a href="https://twitter.com/Hevedy" title="Twitter">Hevedy</a>.
+		</p>
+	</div>
+	<div class="s-12 l-6">
+		<p class="right">
+			<a href="https://twitter.com/Hevedy" title="Twitter"><i class="fa fa-twitter" style="font-size:32px;"></i></a> &nbsp;
+			<a href="https://www.youtube.com/channel/UCDD9osRXQDsDMjjJNG4szAw" title="Youtube"><i class="fa fa-youtube-play" style="font-size:32px;"></i></a> &nbsp;
+			<a href="https://www.twitch.tv/hevedy" title="Twitch"><i class="fa fa-twitch" style="font-size:32px;"></i></a> &nbsp;
+			<a href="https://hevedy.itch.io/" title="Itch.io"><i class="fa fa-archive" style="font-size:32px;"></i></a> &nbsp;
+			<a href="https://github.com/Hevedy" title="Github"><i class="fa fa-github" style="font-size:32px;"></i></a>
+		</p>
+	</div>
+</div>
+</footer>
+<script type="text/javascript" src="../resources/js/responsee.js"></script>
+<script type="text/javascript" src="../resources/js/owl.carousel.min.js"></script>
+</body>
+</html>
