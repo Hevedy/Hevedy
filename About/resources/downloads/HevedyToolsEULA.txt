@@ -13,13 +13,13 @@ In purchasing our software, you purchase a perpetual license to install and use 
 
 1. DEFINITIONS
 
-“Hevedy” means the domain Hevedy.com (and the @Hevedy nickname) created and registered by David Palacios located in Spain.<br><br>
+“Hevedy” means the domain Hevedy.com (and the @Hevedy nickname) created and registered by David Palacios located in Spain.
 
 “Computer” means a virtual or physical personal electronic device that accepts information in digital or similar form and manipulates it for specific result based on a sequence of instructions.
 
 “SOFTWARE PRODUCT or SOFTWARE” means the programs and associated media, and may include “online” or electronic documentation as well as licensed third party Content.
 
-“Use” means to download, install, access, use the functionality of the Software, subject to compliance with the terms of the License.<
+“Use” means to download, install, access, use the functionality of the Software, subject to compliance with the terms of the License.
 
 “You”  means the person, company, or organization that has licensed the SOFTWARE PRODUCT or SOFTWARE.
 
