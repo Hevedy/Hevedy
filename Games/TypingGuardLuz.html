@@ -14,11 +14,14 @@
 	<link rel="stylesheet" href="../resources/css/magnific-popup.min.css">
 	<link rel="stylesheet" href="../resources/css/fonts-manager.css">
 	<link rel="stylesheet" href="../resources/css/template-style.css">
+	<link rel="stylesheet" href="../resources/css/pricetable.css">
 	<script type="text/javascript" src="../resources/js/jquery-3.2.0.min.js"></script>
 	<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="../resources/js/responsee.min.js"></script>
 	<script type="text/javascript" src="../resources/js/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="../resources/js/jquery.magnific-popup.min.js"></script>
+	<script type="text/javascript" src="../resources/js/modernizr.js"></script>
+	<script type="text/javascript" src="../resources/js/pricetable.js"></script>
 </head>
 <body class="size-1140 game03">
 <!-- TOP NAV WITH LOGO -->
@@ -114,6 +117,229 @@
 	<div class="margin">
 		<h2>STATUS: STAGE #2 to #3</h2><br><br><br>
 		<img src="resources/images/Game03Large.jpg" alt="Typing Guard: Luz"><br><br>
+		<br><br><br>
+		<div class="s-12"><br><br>
+		<h2>BUY</h2><br>
+		<div class="cd-pricing-container cd-has-margins">
+			<div class="cd-pricing-switcher">
+				<p class="fieldset">
+					<input type="radio" name="duration-2" value="drmfree" id="drmfree-id" checked>
+					<label for="drmfree-id">DRM FREE</label>
+					<input type="radio" name="duration-2" value="drm" id="drm-id">
+					<label for="drm-id">DRM</label>
+					<span class="cd-switch"></span>
+				</p>
+			</div> <!-- .cd-pricing-switcher -->
+
+			<ul class="cd-pricing-list cd-bounce-invert">
+				<li>
+					<ul class="cd-pricing-wrapper">
+						<li data-type="drmfree" class="is-visible">
+							<header class="cd-pricing-header">
+								<h2>Starter</h2>
+
+								<div class="cd-price">
+									<span class="cd-currency"></span>
+									<span class="cd-value">FREE</span>
+									<span class="cd-duration">One-time</span>
+								</div>
+							</header> <!-- .cd-pricing-header -->
+
+							<div class="cd-pricing-body">
+								<ul class="cd-pricing-features">
+									<li><em>Core</em> Included</li>
+									<li><em>Content</em> Limited</li>
+									<li><em>Updates</em> Limited</li>
+									<li><em>DLCs</em> No</li>
+									<li><em>Betas</em> No</li>
+									<li><em>Launcher</em> Included</li>
+									<li><em>Mods Support</em> No</li>
+									<li><em>Extras</em> No</li>
+									<li><em>Auto Updates</em> No (Only on Itch.io client)</li>
+									<li><em>DRM</em> No</li>
+									<li><em>Steam Key</em> No</li>
+								</ul>
+							</div> <!-- .cd-pricing-body -->
+
+							<footer class="cd-pricing-footer">
+								<a class="cd-select" href="">Get at Itch.io</a>
+							</footer>  <!-- .cd-pricing-footer -->
+						</li>
+
+						<li data-type="drm" class="is-hidden">
+							<header class="cd-pricing-header">
+								<h2>Starter</h2>
+
+								<div class="cd-price">
+									<span class="cd-currency"></span>
+									<span class="cd-value">FREE</span>
+									<span class="cd-duration">One-time</span>
+								</div>
+							</header> <!-- .cd-pricing-header -->
+
+							<div class="cd-pricing-body">
+								<ul class="cd-pricing-features">
+									<li><em>Core</em> Included</li>
+									<li><em>Content</em> Limited</li>
+									<li><em>Updates</em> Limited</li>
+									<li><em>DLCs</em> No</li>
+									<li><em>Betas</em> No</li>
+									<li><em>Launcher</em> Included</li>
+									<li><em>Mods Support</em> No</li>
+									<li><em>Extras</em> No</li>
+									<li><em>Auto Updates</em> Yes</li>
+									<li><em>DRM</em> Yes</li>
+									<li><em>Steam Key</em> No</li>
+								</ul>
+							</div> <!-- .cd-pricing-body -->
+
+							<footer class="cd-pricing-footer">
+								<a class="cd-select" href="#"><strike>Get at Steam</strike></a>
+							</footer>  <!-- .cd-pricing-footer -->
+						</li>
+					</ul> <!-- .cd-pricing-wrapper -->
+				</li>
+
+				<li class="cd-popular">
+					<ul class="cd-pricing-wrapper">
+						<li data-type="drmfree" class="is-visible">
+							<header class="cd-pricing-header">
+								<h2>Standard</h2>
+								
+								<div class="cd-price">
+									<span class="cd-currency">$</span>
+									<span class="cd-value">9.99</span>
+									<span class="cd-duration">One-time</span>
+								</div>
+							</header> <!-- .cd-pricing-header -->
+
+							<div class="cd-pricing-body">
+								<ul class="cd-pricing-features">
+									<li><em>Core</em> Included</li>
+									<li><em>Content</em> Complete</li>
+									<li><em>Updates</em> Included</li>
+									<li><em>DLCs</em> Included</li>
+									<li><em>Betas</em> No</li>
+									<li><em>Launcher</em> Included</li>
+									<li><em>Mods Support</em> Yes</li>
+									<li><em>Extras</em> No</li>
+									<li><em>Auto Updates</em> No (Only on Itch.io client)</li>
+									<li><em>DRM</em> No</li>
+									<li><em>Steam Key</em> No</li>
+								</ul>
+							</div> <!-- .cd-pricing-body -->
+
+							<footer class="cd-pricing-footer">
+								<a class="cd-select" href="">Buy at Itch.io</a>
+								<a class="cd-select" href="#"><strike>Buy at Humble Store</strike></a>
+							</footer>  <!-- .cd-pricing-footer -->
+						</li>
+
+						<li data-type="drm" class="is-hidden">
+							<header class="cd-pricing-header">
+								<h2>Standard</h2>
+
+								<div class="cd-price">
+									<span class="cd-currency">$</span>
+									<span class="cd-value">9.99</span>
+									<span class="cd-duration">One-time</span>
+								</div>
+							</header> <!-- .cd-pricing-header -->
+
+							<div class="cd-pricing-body">
+								<ul class="cd-pricing-features">
+									<li><em>Core</em> Included</li>
+									<li><em>Content</em> Complete</li>
+									<li><em>Updates</em> Included</li>
+									<li><em>DLCs</em> Included</li>
+									<li><em>Betas</em> No</li>
+									<li><em>Launcher</em> Included</li>
+									<li><em>Mods Support</em> Yes</li>
+									<li><em>Extras</em> No</li>
+									<li><em>Auto Updates</em> Yes</li>
+									<li><em>DRM</em> Yes</li>
+									<li><em>Steam Key</em> Included</li>
+								</ul>
+							</div> <!-- .cd-pricing-body -->
+
+							<footer class="cd-pricing-footer">
+								<a class="cd-select" href="#"><strike>Buy at Steam</strike></a>
+							</footer>  <!-- .cd-pricing-footer -->
+						</li>
+					</ul> <!-- .cd-pricing-wrapper -->
+				</li>
+
+				<li>
+					<ul class="cd-pricing-wrapper">
+						<li data-type="drmfree" class="is-visible">
+							<header class="cd-pricing-header">
+								<h2>Supporter</h2>
+
+								<div class="cd-price">
+									<span class="cd-currency">$</span>
+									<span class="cd-value">19.99</span>
+									<span class="cd-duration">One-time</span>
+								</div>
+							</header> <!-- .cd-pricing-header -->
+
+							<div class="cd-pricing-body">
+								<ul class="cd-pricing-features">
+									<li><em>Core</em> Included</li>
+									<li><em>Content</em> Complete</li>
+									<li><em>Updates</em> Included (7 Days Early Access)</li>
+									<li><em>DLCs</em> Included (7 Days Early Access)</li>
+									<li><em>Betas</em> Yes</li>
+									<li><em>Launcher</em> Included</li>
+									<li><em>Mods Support</em> Yes</li>
+									<li><em>Extras</em> Yes</li>
+									<li><em>Auto Updates</em> No (Only on Itch.io client)</li>
+									<li><em>DRM</em> No</li>
+									<li><em>Steam Key</em> No</li>
+								</ul>
+							</div> <!-- .cd-pricing-body -->
+
+							<footer class="cd-pricing-footer">
+								<a class="cd-select" href="">Buy at Itch.io</a>
+								<a class="cd-select" href="#"><strike>Buy at Humble Store</strike></a>
+							</footer>  <!-- .cd-pricing-footer -->
+						</li>
+
+						<li data-type="drm" class="is-hidden">
+							<header class="cd-pricing-header">
+								<h2>Supporter</h2>
+
+								<div class="cd-price">
+									<span class="cd-currency">$</span>
+									<span class="cd-value">19.99</span>
+									<span class="cd-duration">One-time</span>
+								</div>
+							</header> <!-- .cd-pricing-header -->
+
+							<div class="cd-pricing-body">
+								<ul class="cd-pricing-features">
+									<li><em>Core</em> Included</li>
+									<li><em>Content</em> Complete</li>
+									<li><em>Updates</em> Included (7 Days Early Access)</li>
+									<li><em>DLCs</em> Included (7 Days Early Access)</li>
+									<li><em>Betas</em> Yes</li>
+									<li><em>Launcher</em> Included</li>
+									<li><em>Mods Support</em> Yes</li>
+									<li><em>Extras</em> Yes</li>
+									<li><em>Auto Updates</em> Yes</li>
+									<li><em>DRM</em> Yes</li>
+									<li><em>Steam Key</em> Included</li>
+								</ul>
+							</div> <!-- .cd-pricing-body -->
+
+							<footer class="cd-pricing-footer">
+								<a class="cd-select" href="#"><strike>Buy at Steam</strike></a>
+							</footer>  <!-- .cd-pricing-footer -->
+						</li>
+					</ul> <!-- .cd-pricing-wrapper -->
+				</li>
+			</ul> <!-- .cd-pricing-list -->
+		</div> <!-- .cd-pricing-container -->	
+		<br>
 		<iframe frameborder="0" src="https://itch.io/embed/225112?linkback=true&amp;bg_color=6e7377&amp;fg_color=ffbd24&amp;link_color=5cbdfa&amp;border_color=54626a" width="552" height="180"></iframe>
 		<iframe width="560" height="180" src="http://www.indiedb.com/games/typing-guard-luz/widget" frameborder="0"></iframe>
 		<br><br><br>
