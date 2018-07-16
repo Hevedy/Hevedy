@@ -4,27 +4,20 @@ Primary style
 
 -------------------------------- */
 
-.cd-pricing-container html, .cd-pricing-container body, .cd-pricing-container div, .cd-pricing-container span, .cd-pricing-container applet, .cd-pricing-container object, .cd-pricing-container iframe, .cd-pricing-container h1, 
-.cd-pricing-container h2, .cd-pricing-container h3, .cd-pricing-container h4, .cd-pricing-container h5, .cd-pricing-container h6, .cd-pricing-container p, .cd-pricing-container blockquote, .cd-pricing-container pre, 
-.cd-pricing-container a, .cd-pricing-container abbr, .cd-pricing-container acronym, .cd-pricing-container address, .cd-pricing-container big, .cd-pricing-container cite, .cd-pricing-container code, .cd-pricing-container del, 
-.cd-pricing-container dfn, .cd-pricing-container em, .cd-pricing-container img, .cd-pricing-container ins, .cd-pricing-container kbd, .cd-pricing-container q, .cd-pricing-container s, .cd-pricing-container samp, 
-.cd-pricing-container small, .cd-pricing-container strike, .cd-pricing-container strong, .cd-pricing-container sub, .cd-pricing-container sup, .cd-pricing-container tt, .cd-pricing-container var, .cd-pricing-container b, 
-.cd-pricing-container u, .cd-pricing-container i, .cd-pricing-container center, .cd-pricing-container dl, .cd-pricing-container dt, .cd-pricing-container dd, .cd-pricing-container ol, .cd-pricing-container ul, .cd-pricing-container li, 
-.cd-pricing-container fieldset, .cd-pricing-container form, .cd-pricing-container label, .cd-pricing-container legend, .cd-pricing-container table, .cd-pricing-container caption, .cd-pricing-container tbody, .cd-pricing-container tfoot, 
-.cd-pricing-container thead, .cd-pricing-container tr, .cd-pricing-container th, .cd-pricing-container td, .cd-pricing-container article, .cd-pricing-container aside, .cd-pricing-container canvas, .cd-pricing-container details, 
-.cd-pricing-container embed, .cd-pricing-container figure, .cd-pricing-container figcaption, .cd-pricing-container footer, .cd-pricing-container header, .cd-pricing-container hgroup, .cd-pricing-container menu, .cd-pricing-container nav, 
-.cd-pricing-container output, .cd-pricing-container ruby, .cd-pricing-container section, .cd-pricing-container summary, .cd-pricing-container time, .cd-pricing-container mark, .cd-pricing-container audio, .cd-pricing-container video {
+.cd-pricing-container *, .cd-pricing-switcher * {
 	margin: 0;
 	padding: 0;
 	border: 0;
+	font-size: 100%;
+	font: inherit;
 	vertical-align: baseline;
 }
 
 .cd-pricing-container article, .cd-pricing-container aside, .cd-pricing-container details, .cd-pricing-container figcaption, .cd-pricing-container figure, 
-.cd-pricing-container footer, .cd-pricing-container header, .cd-pricing-container hgroup, .cd-pricing-container menu, .cd-pricing-container nav, .cd-pricing-container section, .cd-pricing-container main {
+.cd-pricing-container footer, .cd-pricing-container header, .cd-pricing-container hgroup, .cd-pricing-container menu, .cd-pricing-container nav, 
+.cd-pricing-container section, .cd-pricing-container main {
 	display: block;
 }
-
 .cd-pricing-container body {
 	line-height: 1;
 }
@@ -34,7 +27,6 @@ Primary style
 .cd-pricing-container blockquote, .cd-pricing-container q {
 	quotes: none;
 }
-
 .cd-pricing-container blockquote:before, .cd-pricing-container blockquote:after,
 .cd-pricing-container q:before, .cd-pricing-container q:after {
 	content: '';
@@ -45,29 +37,34 @@ Primary style
 	border-spacing: 0;
 }
 
-.cd-pricing-container *, .cd-pricing-container *::after, .cd-pricing-container *::before {
+.cd-pricing-container *, .cd-pricing-container *::after, .cd-pricing-container *::before, 
+.cd-pricing-switcher *, .cd-pricing-switcher *::after, .cd-pricing-switcher *::before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.cd-pricing-container html {
+.cd-pricing-container html, 
+.cd-pricing-switcher html {
   font-size: 62.5%;
 }
 
-.cd-pricing-container html * {
+.cd-pricing-container html *,
+.cd-pricing-switcher html *  {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.cd-pricing-container body {
+.cd-pricing-container body,
+.cd-pricing-switcher body {
   font-size: 1.6rem;
   font-family: "Open Sans", sans-serif;
   color: #173d50;
   background-color: #173d50;
 }
 
-.cd-pricing-container a {
+.cd-pricing-container a,
+.cd-pricing-switcher a {
   color: #e97d68;
   text-decoration: none;
 }
@@ -103,6 +100,8 @@ Main Components
   position: relative;
   padding: 2px;
   border: 1px solid #225b78;
+  background-color: #2f004f;
+  
 }
 .cd-pricing-switcher input[type="radio"] {
   position: absolute;
@@ -112,13 +111,14 @@ Main Components
   position: relative;
   z-index: 1;
   display: inline-block;
-  float: left;
   width: 90px;
   height: 40px;
   line-height: 40px;
   cursor: pointer;
   font-size: 1.4rem;
   color: #FFFFFF;
+  text-align: center;
+  background-color: #10acf500;
 }
 .cd-pricing-switcher .cd-switch {
   /* floating background */
@@ -127,7 +127,7 @@ Main Components
   left: 2px;
   height: 40px;
   width: 90px;
-  background-color: #0c1f28;
+  background-color: #6600aa;
   -webkit-transition: -webkit-transform 0.5s;
   -moz-transition: -moz-transform 0.5s;
   transition: transform 0.5s;
@@ -525,6 +525,7 @@ Main Components
   /* on mobile it covers the .cd-pricing-header */
   height: 80px;
   width: 100%;
+  background-color: transparent;
 }
 .cd-pricing-footer::after {
   /* right arrow visible on mobile */
@@ -576,20 +577,20 @@ Main Components
     height: auto;
     padding: 1.3em 3em;
     color: #FFFFFF;
-    background-color: #0c1f28;
+    background-color: #2f004f;
 	font-size: 1.4rem;
     text-indent: 0;
     text-transform: uppercase;
     letter-spacing: 2px;
   }
   .no-touch .cd-select:hover {
-    background-color: #112e3c;
+    background-color: #6600aa;
   }
   .cd-popular .cd-select {
     background-color: #6600aa;
   }
   .no-touch .cd-popular .cd-select:hover {
-    background-color: #ec907e;
+    background-color: #2f004f;
   }
   .cd-secondary-theme .cd-popular .cd-select {
     background-color: #0c1f28;
