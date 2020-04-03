@@ -2,8 +2,8 @@ END USER LICENSE AGREEMENT - HEVEDY GAMES
 -----------------------------------------
 
 
-Last updated: 15nd January, 2018
-Version: 1
+Last updated: 1nd January, 2020
+Version: 2
 
 In purchasing, downloading, using or playing the Software, you acknowledge that you have read and accept this agreement in its entirety, and agree to be bound by the terms therein. If you do not agree to follow these rules, then you must not buy, download, use or play the Software.
 
@@ -13,7 +13,7 @@ In purchasing our software, you purchase a perpetual license to install and use 
 
 1. DEFINITIONS
 
-“Hevedy” means the domain Hevedy.com (and the @Hevedy nickname) created and registered by David Palacios located in Spain.
+“Hevedy” means the owner of the domain Hevedy.com (and the @Hevedy nickname) created and registered by David Palacios located in Spain.
 
 “Computer” means a virtual or physical personal electronic device that accepts information in digital or similar form and manipulates it for specific result based on a sequence of instructions.
 
