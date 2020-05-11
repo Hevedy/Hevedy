@@ -1,8 +1,8 @@
 {
 	"event": 0,
 	"eventText": "Hello World",
-	"infoMenu": ["The new 0.8.0 has been relesed get it now!", 
+	"infoMenu": ["The new 0.8.0 has been released get it now!", 
 				"Follow the development at Twitter @Hevedy or @HevedyGames",
 				"The new website is live at hevedy.com/visyer/",
-				"Share with the community your music #Visyer @Hevedy"]
+				"Share with the community your music and videos #Visyer @Hevedy"]
 }
