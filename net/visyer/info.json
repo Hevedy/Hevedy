@@ -1,7 +1,7 @@
 {
-"test": "TestString",
-"infoMenu": ["The new 0.8.0 has been relesed get it now!", 
-			"Follow the development at Twitter @Hevedy or @HevedyGames",
-			"Thew new website is live at hevedy.com/Visyer/",
-			"Share with the community your music #Visyer @Hevedy"]
+	"event": 0,
+	"infoMenu": ["The new 0.8.0 has been relesed get it now!", 
+				"Follow the development at Twitter @Hevedy or @HevedyGames",
+				"The new website is live at hevedy.com/visyer/",
+				"Share with the community your music #Visyer @Hevedy"]
 }
