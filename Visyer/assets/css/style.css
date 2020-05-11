@@ -1227,6 +1227,11 @@ section {
   color: #fff;
 }
 
+.pricing .box .space-buy {
+  display: block;
+  padding: 5px 5px 5px 5px;
+}
+
 .pricing .recommended {
   border-color: #7cc576;
 }
