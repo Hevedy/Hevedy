@@ -6,13 +6,13 @@
 	<meta name="description" content="We develop unique videogames, tools and guides, join us in this adventure!">
 	<meta property="og:description" content="We develop unique videogames, tools and guides, join us in this adventure!" />
 	<meta property="og:site_name" content="Hevedy" />
-	<meta property="og:title" content="Hevedy | Visyer Structure" />
+	<meta property="og:title" content="Hevedy | Visyer Complextro" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://www.hevedy.com/tools/visyerstructure.html" />
 	<meta property="og:image" content="http://www.hevedy.com/assets/media/images/Logo_Embed_400.png" />
 	<meta property="og:locale" content="en_GB" />
 	<meta property="og:locale:alternate" content="es_ES" />
-	<title>Hevedy | Visyer Structure</title>
+	<title>Hevedy | Visyer Complextro</title>
 	<link rel="icon" type="image/png" href="../assets/media/images/WebIcon.png">
 	<link rel="stylesheet" href="../assets/css/components.min.css">
 	<link rel="stylesheet" href="../assets/css/icons.min.css">
@@ -85,7 +85,7 @@
 								<a>Articles & Others</a>
 								<ul>
 									<li>
-										<a href="../tools/visyerstructure.html">Visyer Structure</a>
+										<a href="../tools/visyerstructure.html">Visyer Complextro</a>
 									</li>
 									<li>
 										<a href="../tools/rsmgi.html">RSMGI (Concept)</a>
@@ -148,15 +148,30 @@
 		<img src="assets/images/visyer/VisyerDiagramSchema.png" alt="">
 	</a><br>
 	<p class="s-12 m-12 l-8 center text-center">
-	*Note only the main structure is listed in the image listed here.<br><br>
+	*Note only the main structure is listed in the image listed here.<br>
+	<a href="https://github.com/Hevedy/HevLib" target="_blank">Hevedy Library</a>
+	&bull; <a href="https://github.com/Hevedy/GameThis-Community" target="_blank">Hevedy Game This</a>
+	&bull; <a href="https://github.com/Hevedy/DiscordGameSDK/tree/hevedy" target="_blank">Hevedy Discord</a>
+	&bull; <a href="https://github.com/Hevedy/HevedyDialogs" target="_blank">Hevedy Dialogs</a>
 	</p>
+	<h2>Modules</h2><br>
 	<p class="s-12 m-12 l-8 center">
+	&bull; <strong>Launcher: </strong>Was made in C++ using Qt as main framework, it basically get hardware stats to generate a key that sent to the game in reference for performance, have an accounts manager and main settins too.<br><br>
+	&bull; <strong>Discord Plugin: </strong>Had to make this plugin in order to get and set data into Discord desktop applications, send data such as rich presence to Discord and display the playing tracks.<br><br>
+	&bull; <strong>Audio Plugin: </strong>Manages the local tracks, read and play them, allows to play .mp3, .wav, .ogg and .flac, used <a href="https://www.libsdl.org/" target="_blank">SDL2</a> as main system to read and play the audio outside of Unreal Engine 4. To decode metadata have the library <a href="https://taglib.org/" target="_blank">Taglib</a> inside integrated statically for faster read without initialize classes.<br><br>
+	&bull; <strong>Hev Lib Plugin: </strong>This is a project started years ago and is the biggest and older, evolved over the years with Unreal Engine 4, features basically a complete suite of tools for different tasks like read text files, or parse content to configs, random C++11 generators and other contents inside and image readers.<br><br>
+	&bull; <strong>Game This Plugin: </strong>Link to my external tool, is a C# Nexus system to connect with Discord, Twitch and other platforms, it helps to parse contents and get and retrieve data externally, where there are libs or content thats made originally for C# and aren't core tools needed inside the game and can be managed externally, as reference Discord Rich presence worked with it at first instance.<br><br>
+	&bull; <strong>Unreal Engine (Custom): </strong>Ins't a module but the whole structure of the game where is build from, basically here did changes on the Framework as by default didn't had any spectrum systems on this version, includes <a href="https://hevedy.artstation.com/projects/4bWDoY" target="_blank">my illumination</a> changes, fixed some issues too and added some utils tools inside the Blueprint modules and inside the UI widgets, some of the changes are on my <a href="https://github.com/Hevedy/UnrealEngine" target="_blank">Github</a>, need a linked account in order to see the <a href="https://github.com/Hevedy/UnrealEngine" target="_blank">Unreal Repository</a><br><br>
+	&bull; <strong>Builder: </strong>With the engine tools made a custom set of C# in order to manage all the versions per platform and per edition, its a builder in .Net Core 2 via command line that compiles, packages and set ready per platform the files to be uploaded.
 	<br>
-	</p>
+	</p><br><br>
 	<a href="assets/images/visyer/HzPanel.jpg" class="s-12 m-12 l-8 center text-center image-popup">
 		<img src="assets/images/visyer/HzPanel.jpg" alt="">
-	</a><br>
+	</a><br><br>
 	<p class="s-12 m-12 l-8 center">
+	&bull; <strong>Game Core: </strong>Where all the modules connect between, the game instance basically storage the Settings, the load tracks and playlists. The settings module and social are here, basically manage the whole game settings and apply these to the rest of the game, is a main nexus to all the rest of classes, the socual module in other hand manages things like Steam or Discord and is who send the data to rich presence and other modules.<br><br>
+	The game mode have media framework that manages a audio player thats used to play stream music from radios and is linked to the Audio Manager, the audio manager manages 2 local track players and the media framework player with the Player Manager that manages the play, pauses, stop and events like loads and verifications, the metadata and final spectrum values are extrated by a secondary manager inside the module that send these to Blueprint ready nodes, so the can read the data from the rest of game modules.<br><br>
+	There is a loader too inside the Audio Manager that extracts content stored inside the pak files, the purpose is get what files the user have filtered per edition and platform and extract them to be played or act as settings, the files are verified too and loaded async to the rest of the game.<br>
 	<br>
 	</p>
 	
@@ -171,7 +186,7 @@
 	Used Unreal Engine 4.21 as was my favourite tool of choice to develop this as wanted from start a live 3D visualizer, in other cases I used Qt tools but I wanted to go further in this.<br><br>
 	The game have 3 different editions and is posted in different stores, this means each edition have different needs and each platform too and make all the changes manually is time consuming and proven human fail, so had to develop a C# .Net Core 2 app in order to auto manage all the builds, made too a system to make local backups of the whole project split into code and art.<br><br>
 	There was no *the key tool to rule them all* so I had to make mine, Unreal Engine 4 is an awesome set of tools overall but the audio side isn't as good as I needed so totally ignored the built in audio system and is just used for effects or noticiation, only used the <a href="https://docs.unrealengine.com/en-US/Engine/MediaFramework/index.html" target="_blank">UE4 Media Framework</a> for stream the radio, and found a problem there was no spectrum measure systems or alike working on my build, so had to port part from last versions to this custom version plus add some custom changes to it.<br><br>
-	The main music player in other hand for local music uses the awesome <a href="https://www.parallelcube.com/2018/11/11/audio-analyzer-plugin/">Audio Analyzer plugin</a> by Parallelcube, this allows me to have a complete support for .mp3, .wav, .ogg and .flac. but not everything is that easy isn't?<br>
+	The main music player in other hand for local music uses the awesome <a href="https://www.parallelcube.com/2018/11/11/audio-analyzer-plugin/" target="_blank">Audio Analyzer plugin</a> by Parallelcube, this allows me to have a complete support for .mp3, .wav, .ogg and .flac. but not everything is that easy isn't?<br>
 	After create a custom reader for my files noticed the loader wasn't that fast, so reworked this system and added an async loader, what this means ? First that the files can load without affect the main thread of the game in a second plane, as second part this means need to create a whole structure that isn't linear in code while allow the player to play their music and manager 3 music players at time. (Yeah was it hard as it sound).<br><br>
 	</p>
 	<a href="assets/images/visyer/AudioPanel.jpg" class="s-12 m-12 l-8 center text-center image-popup">
@@ -194,10 +209,10 @@
 	<br><br><br><br><h2>Final Notes</h2><br>
 	<p class="s-12 m-12 l-8 center">
 	With this article I wanted to show you my whole experience and the pasion set developing this whole tool alone, because isn't just a visualizer is a complete application, special thanks to all the people that supports me everyday!.<br><br>
-	If you found it interesting consider try the <b>free</b> version of <a href="https://www.hevedy.com/visyer/">Visyer Starter Edition</a> and if you like it support me purchaing the tools or just telling others about it.<br><br>
+	If you found it interesting consider try the <b>free</b> version of <a href="https://www.hevedy.com/visyer/" target="_blank">Visyer Starter Edition</a> and if you like it support me purchaing the tools or just telling others about it.<br><br>
 	
 	I wish this application help different people doing their common tasks a bit more wonderful, and support the music artists directly from their sites or stores that actually support them.<br><br>
-	Special thanks to the music creators <a href="https://zero-project.gr/">Zero Project</a> & <a href="https://creo-music.com/">Creo</a> for their tracks, and thank you for take your time to read the article!
+	Special thanks to the music creators <a href="https://zero-project.gr/" target="_blank">Zero Project</a> & <a href="https://creo-music.com/" target="_blank">Creo</a> for their tracks, and thank you for take your time to read the article!
 	</p>
 	
 	<p class="s-12 m-12 l-8 center text-center"><br><br><br>
