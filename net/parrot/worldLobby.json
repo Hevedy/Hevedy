@@ -1,0 +1,14 @@
+{
+	"global": [
+	{ "text": "Example", "loc": "23|45|34" },
+	{ "text": "Example2", "loc": "2|4|3" }
+	],
+	"english": [
+	{ "text": "Example", "loc": "23|45|34" },
+	{ "text": "Example2", "loc": "2|4|3" }
+	],
+	"spanish": [
+	{ "text": "Ejemplo", "loc": "23|45|34" },
+	{ "text": "Ejemplo2", "loc": "2|4|3" }
+	]
+}
