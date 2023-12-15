@@ -43,11 +43,6 @@
 				<ul class="right top-ul chevron">
 					<li>
 						<a href="../index.html">Home</a>
-						<ul>
-							<li>
-								<a href="../es/index.html">Español</a>
-							</li>
-						</ul>
 					</li>
 					<li>
 						<a href="../games/index.html">Games</a>
@@ -132,14 +127,49 @@
 	<a href="assets/images/got/GOTHeaderLarge.jpg" class="s-12 m-12 l-8 center text-center image-popup">
 		<img src="assets/images/got/GOTHeaderLarge.jpg" alt="">
 	</a><br>
-	<br><h2>TBR</h2><br>
+	<br><h2>Master Shader, Lighting & Decals</h2>
+	<p class="s-12 m-12 l-8 center text-center">
+	Original Article at <a href="https://www.artstation.com/artwork/yDPy8R" title="Artstation" target="_blank">Artstation</a>.
+	</p><br><br>
 	<p class="s-12 m-12 l-8 center">
-	Test
+	During my period on Ghost of Tabor as client of me for more than half year until the post release aside from provide our tools worked as principal senior technical artist.
+- The Render & Reflections:
+One of the biggest issues on mobile were the no correction on coloring, lighting and reflections, so turns out the scenes looked almost total different between platforms with the exact same content, the baked data lost their direction vectors and other alike contents, alike the reflection captures loss their normal aliment and other elements along the road, this on top that the tonemapper is different.
+A new fake refleciton capture were introduced in 2D, since the spheric capture were limited on mobile.
+- The Instances:
+The auto instancing didn't worked as we expected on Quest 2, so the solution from my side were to include my instances system that provides smooth material changes also, it were used to create trash on the floor and other elements, like a complete boat containers collection with variations.
+- The Materials:
+One of the main challenges to work for Quest 2 titles are all the limitations and compatibility problems you can find on the road.
+When came to the project the major issue were the memory was filled on Quest 2, decided to clamp all the settings per platform and do a complete revision of textures and material, created a new master material since were be used later and will save permutations on real time.
+Meanwhile tried to use a single master material, sub different materials were created after this to non accumulate all the permutations inside a big single chunk, also can be updated individually and don't affect all the shaders (so prevent massive recompilations).
+Included a custom solution from my tiled random materials system so the models on selection can have different textures or materials variations over the world sharing the same drawcall across them, so this can be used with instances.
+When created our main open world level since we use baked light we found diverse issues like foliage problems and space problems with the baker, my solution to this were to provide a prebaked atlas texture to store the color of the level and shadows from top view, this were later readed and injected into the foliage materials.
+Also the trees occlusion wasn't the best and bake everything wasn't the best deal, so the trees come also with an injected channel of AO for the leafs also coloring.
+Camera and Material masking:
+The game needed of a class for lerping effects and shader lights across the levels, the implementation ran inside the local player controller component so can be working correctly on each local client without affect networking and such elements, it came with a manager for visible lights and other elements on it in order to accumulate render tasks calls.
 	</p>
 	
-	<p class="s-12 m-12 l-8 center text-center"><br><br><br>
-	This article aswell the images are under the license <a href="https://creativecommons.org/licenses/by-sa/4.0/" title="License" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)</a> made by Hevedy. Feel free to use this concept while you give credit to the original author <a href="https://twitter.com/Hevedy" title="Twitter" target="_blank">Hevedy</a>.
+	<br><h2>Real-time destruction & Custom HLODs C++</h2>
+	<p class="s-12 m-12 l-8 center text-center">
+	Original Article at <a href="https://www.artstation.com/artwork/YBv6b3" title="Artstation" target="_blank">Artstation</a>.
+	</p><br><br>
+	<p class="s-12 m-12 l-8 center">
+Note all the tools listed on this post were made in C++ directly for optimization, except the dev tools that are a combo.
+Tools for renaming and automatic material instances creation.
+Some of the headers and files created needed a custom calls, so did a batching tool process to help the artist and switch platforms automatically.
+- The Physics & Destruction:
+At some point in the game we needed of breakable glass, as our artist nor programmers found a solution for this, decided to implement a modular system that allows to have any kind of breakable element in the game, say a glass bottle, glass, wall or a red barrel.
+And yeah this class were totally replicated.
+This came with a system prior I developed for my games but ended in a mutation that have layers/steps lets say, where you can define of step affects the world, can cause damage in area, play sounds and effects, you can have as much states as you want, for events like degradation of a wall or glass, made some example effects for the artist for break bottles and glass using Niagara and specific materials for particles for lower cost.
+By the end of the day this were the system used for all the destruction glass in the Island and other elements like barrels etc.
+- The Level Creation & HLODs:
+Due engine limitations the HLODs by default don't work well with the baker and was a tedious task for the artist, so made the custom HLODs, this implementation support different meshes individually plus particles.
+Getting the local player location we can know at all time were the player is, this is done on super low frequency to don't affect the game at all, once the player is close, the system start to process the parts assigned to be rendered, once the whole models are load will remove the hull one or ones as more than one were possible to be set, plus the load times can be personalized plus the render load order.
+All the load is batched so it don't affect the game or created freezes.
+- The Instances:
+The auto instancing didn't worked as we expected on Quest 2, so the solution from my side were to include my instances system that provides smooth material changes also, it were used to create trash on the floor and other elements, like a complete boat containers collection with variations.
 	</p>
+	
 	</div>
 </div>
 <!-- FIRST BLOCK -->
@@ -149,7 +179,7 @@
 <div class="line">
 	<div class="s-12 l-6">
 		<p>
-			<br>2017-2023 Rights Reserved. Website by <a href="https://twitter.com/Hevedy" title="Twitter" target="_blank">Hevedy</a>.
+			<br>2017-2024 Rights Reserved. Website by <a href="https://twitter.com/Hevedy" title="Twitter" target="_blank">Hevedy</a>.
 		</p>
 	</div>
 	<div class="s-12 l-6">
