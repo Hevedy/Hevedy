@@ -1,0 +1,17 @@
+User-agent: * 
+Disallow: / 
+
+User-agent: Googlebot 
+Disallow: 
+
+User-agent: bingbot 
+Disallow: /not-for-bing/ 
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: GhatGPT-User
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
