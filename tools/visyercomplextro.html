@@ -196,7 +196,7 @@
 	<p class="s-12 m-12 l-8 center">
 	Once this system were created it worked fine but there was another problem, the user will need to close the game in order to reload the tracks and playlists... Solution? rework the whole loader another time, this time just read the playlists and store them into structs where store all the paths, these are processed and verified as valid files, the files are invalid then the playlist isn't created or the track isn't loaded but last one instead.<br><br>
 	At this point and 3 months later had the whole system made but the load times for 5 tracks were too high like a whole 2 seconds per track to read metadata and validate it, solution?... make a new parser, edited the audio plugin and added a new library support called <a href="https://taglib.org/" target="_blank">Taglib</a> and now the load times are in some point x50 times faster than what used to be, basically 50 tracks can load in couple seconds or less. (Ship this)<br><br>
-	So whats the 3º audio player for? This one basically get spectrum and other values before it plays, so allows me to get the next notes and predict actions for the game, after all this there was the last issue to solve; the stream audio and the local audio output different spectrums and aren't feature equal, so had to do a manager inside the exiting manager to get per type values and join it inside the same system.<br><br>
+	So whats the 3ยบ audio player for? This one basically get spectrum and other values before it plays, so allows me to get the next notes and predict actions for the game, after all this there was the last issue to solve; the stream audio and the local audio output different spectrums and aren't feature equal, so had to do a manager inside the exiting manager to get per type values and join it inside the same system.<br><br>
 	But wait there is more... the file browser per OS native included inside Unreal Engine 4 is illegal to be shipped or used by EULA on a final product, as is part of development tools, and had to use an external library and use a plugin <a href="https://github.com/Hevedy/HevedyDialogs" target="_blank">TinyFileDialogs</a> using the plugin of <a href="https://github.com/Doublezer0/TinyFileDialogsUE4" target="_blank">Doublezer0</a> as base branch, but turns out it don't work well in fullscreens and won't work in other platforms outside of Desktop, so the solution was to build a custom one inside <a href="https://docs.unrealengine.com/en-US/Engine/UMG/UserGuide/index.html" target="_blank">UMG</a> using custom IO function in order to detect things like installed Hard drives.<br><br>
 	</p>
 	
@@ -228,7 +228,7 @@
 <div class="line">
 	<div class="s-12 l-6">
 		<p>
-			<br>2017-2024 Rights Reserved. Website by <a href="https://twitter.com/Hevedy" title="Twitter" target="_blank">Hevedy</a>.
+			<br>2017-2025 Rights Reserved. Website by <a href="https://twitter.com/Hevedy" title="Twitter" target="_blank">Hevedy</a>.
 		</p>
 	</div>
 	<div class="s-12 l-6">
