@@ -671,7 +671,7 @@ section {
 .why-us .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(#dfb80f 50%, rgba(124, 197, 118, 0.4) 52%);
+  background: radial-gradient(#dfb80f 50%, rgba(197, 185, 118, 0.4) 52%);
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -712,7 +712,7 @@ section {
   animation-timing-function: steps;
   opacity: 1;
   border-radius: 50%;
-  border: 5px solid rgba(124, 197, 118, 0.7);
+  border: 5px solid rgba(196, 197, 118, 0.7);
   top: -15%;
   left: -15%;
   background: rgba(198, 16, 0, 0);
