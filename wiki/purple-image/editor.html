@@ -14,15 +14,15 @@
         <link rel="prev" href="color-palette.html">
       
       
-        <link rel="next" href="viewer.html">
+        <link rel="next" href="../purpleprint/index.html">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
     
     
       
-        <title>Image Editor - Hevedy Docs</title>
+        <title>Editor - Hevedy Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#image-editor" class="md-skip">
+        <a href="#editor" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Image Editor
+              Editor
             
           </span>
         </div>
@@ -244,7 +244,7 @@
   
   
   <span class="md-ellipsis">
-    Introduction
+    Hevedy Docs
     
   </span>
   
@@ -349,6 +349,31 @@
   
   
     <li class="md-nav__item">
+      <a href="board.html" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 3v6h8V3m-8 18h8V11h-8M3 21h8v-6H3m0-2h8V3H3z"/></svg>
+  
+  <span class="md-ellipsis">
+    Image Board
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="color-palette.html" class="md-nav__link">
         
   
@@ -390,7 +415,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m22.7 14.3-1 1-2-2 1-1c.1-.1.2-.2.4-.2.1 0 .3.1.4.2l1.3 1.3c.1.2.1.5-.1.7M13 19.9V22h2.1l6.1-6.1-2-2zM21 5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h6v-1.9l1.1-1.1H5l3.5-4.5 2.5 3 3.5-4.5 1.6 2.1 4.9-5z"/></svg>
   
   <span class="md-ellipsis">
-    Image Editor
+    Editor
     
   </span>
   
@@ -412,7 +437,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m22.7 14.3-1 1-2-2 1-1c.1-.1.2-.2.4-.2.1 0 .3.1.4.2l1.3 1.3c.1.2.1.5-.1.7M13 19.9V22h2.1l6.1-6.1-2-2zM21 5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h6v-1.9l1.1-1.1H5l3.5-4.5 2.5 3 3.5-4.5 1.6 2.1 4.9-5z"/></svg>
   
   <span class="md-ellipsis">
-    Image Editor
+    Editor
     
   </span>
   
@@ -474,44 +499,10 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project layout
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="viewer.html" class="md-nav__link">
-        
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 3v6h8V3m-8 18h8V11h-8M3 21h8v-6H3m0-2h8V3H3z"/></svg>
-  
-  <span class="md-ellipsis">
-    Image Board
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1413,15 +1404,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project layout
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1438,7 +1420,19 @@
 
 
 
-<h1 id="image-editor">Image Editor</h1>
+<h1 id="editor">Editor</h1>
+<p>The <strong>Editor</strong> is a powerful and versatile image editing workspace with multiple specialized features:  </p>
+<ul>
+<li>
+<p><strong>LUT Editor:</strong> A full-featured LUT (Look-Up Table) editor with precise controls to manipulate color grading, contrast, brightness, and more. Create and export custom LUTs for game engines or other creative applications.  </p>
+</li>
+<li>
+<p><strong>Channel Splitter:</strong> Extract individual color channels (e.g., Red, Green, Blue, Alpha) from your images, allowing for detailed per-channel editing.  </p>
+</li>
+<li>
+<p><strong>Channel Combiner:</strong> Combine separate grayscale images representing different color channels into a single packed texture, optimizing performance and texture memory usage.  </p>
+</li>
+</ul>
 <p><img alt="Logo" src="../assets/images/purple-image/CombinerLayers.png" /></p>
 <p>The packager tool can help you to combine or split images in layers saving until x2 times of memory per texture for your games.</p>
 <p>The tool include 5 functions combine, split, convert, package and batch.</p>
@@ -1462,12 +1456,6 @@
 <li><code>mkdocs build</code> - Build the documentation site.</li>
 <li><code>mkdocs -h</code> - Print help message and exit.</li>
 </ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre>
 
 
 
