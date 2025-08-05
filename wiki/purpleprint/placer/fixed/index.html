@@ -6,28 +6,30 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Fixed container with instances to spawn in the world.">
       
       
       
-        <link rel="prev" href="../components/purpleprint-core-manager-component.html">
+      
+        <link rel="prev" href="../installation.html">
       
       
-        <link rel="next" href="../ui/purpleprint-user-widget.html">
+        <link rel="next" href="fixed-field.html">
       
       
-      <link rel="icon" href="../../../../assets/images/logo.png">
+      <link rel="icon" href="../../../assets/images/logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
     
     
       
-        <title>PurpleprintHUD.h - Hevedy Docs</title>
+        <title>Fixed Placer - Hevedy Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -35,7 +37,7 @@
     
     
       
-        <script src="../../../../assets/external/unpkg.com/iframe-worker/shim.js"></script>
+        <script src="../../../assets/external/unpkg.com/iframe-worker/shim.js"></script>
       
     
     
@@ -43,12 +45,12 @@
         
         
         
-        <link rel="stylesheet" href="../../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#purpleprinthudh" class="md-skip">
+        <a href="#fixed-placer" class="md-skip">
           Skip to content
         </a>
       
@@ -90,9 +92,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../index.html" title="Hevedy Docs" class="md-header__button md-logo" aria-label="Hevedy Docs" data-md-component="logo">
+    <a href="../../../index.html" title="Hevedy Docs" class="md-header__button md-logo" aria-label="Hevedy Docs" data-md-component="logo">
       
-  <img src="../../../../assets/images/logo-white.png" alt="logo">
+  <img src="../../../assets/images/logo-white.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -109,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              PurpleprintHUD.h
+              Fixed Placer
             
           </span>
         </div>
@@ -220,9 +222,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../index.html" title="Hevedy Docs" class="md-nav__button md-logo" aria-label="Hevedy Docs" data-md-component="logo">
+    <a href="../../../index.html" title="Hevedy Docs" class="md-nav__button md-logo" aria-label="Hevedy Docs" data-md-component="logo">
       
-  <img src="../../../../assets/images/logo-white.png" alt="logo">
+  <img src="../../../assets/images/logo-white.png" alt="logo">
 
     </a>
     Hevedy Docs
@@ -237,7 +239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../index.html" class="md-nav__link">
+      <a href="../../../index.html" class="md-nav__link">
         
   
   
@@ -285,7 +287,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../purple-image/index.html" class="md-nav__link ">
+            <a href="../../../purple-image/index.html" class="md-nav__link ">
               
   
   
@@ -320,7 +322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../purple-image/batcher.html" class="md-nav__link">
+      <a href="../../../purple-image/batcher.html" class="md-nav__link">
         
   
   
@@ -345,7 +347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../purple-image/board.html" class="md-nav__link">
+      <a href="../../../purple-image/board.html" class="md-nav__link">
         
   
   
@@ -370,7 +372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../purple-image/color-palette.html" class="md-nav__link">
+      <a href="../../../purple-image/color-palette.html" class="md-nav__link">
         
   
   
@@ -395,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../purple-image/editor.html" class="md-nav__link">
+      <a href="../../../purple-image/editor.html" class="md-nav__link">
         
   
   
@@ -464,7 +466,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../index.html" class="md-nav__link ">
+            <a href="../../index.html" class="md-nav__link ">
               
   
   
@@ -517,7 +519,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../audio/index.html" class="md-nav__link ">
+            <a href="../../audio/index.html" class="md-nav__link ">
               
   
   
@@ -575,7 +577,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../bridge/index.html" class="md-nav__link ">
+            <a href="../../bridge/index.html" class="md-nav__link ">
               
   
   
@@ -612,8 +614,6 @@
                 
   
   
-    
-  
   
   
     
@@ -629,15 +629,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../index.html" class="md-nav__link ">
+            <a href="../../core/index.html" class="md-nav__link ">
               
   
   
@@ -658,7 +658,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             Core
@@ -671,10 +671,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -702,11 +700,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_2" >
         
           
           <label class="md-nav__link" for="__nav_3_4_2" id="__nav_3_4_2_label" tabindex="0">
@@ -722,7 +720,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_4_2">
             <span class="md-nav__icon md-icon"></span>
             Api
@@ -736,7 +734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../purpleprint-core-camera-tracker-editor.html" class="md-nav__link">
+      <a href="../../core/api/purpleprint-core-camera-tracker-editor.html" class="md-nav__link">
         
   
   
@@ -759,7 +757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../purpleprint-core-math.html" class="md-nav__link">
+      <a href="../../core/api/purpleprint-core-math.html" class="md-nav__link">
         
   
   
@@ -782,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../purpleprint-core-misc-editor.html" class="md-nav__link">
+      <a href="../../core/api/purpleprint-core-misc-editor.html" class="md-nav__link">
         
   
   
@@ -805,7 +803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../purpleprint-core-misc.html" class="md-nav__link">
+      <a href="../../core/api/purpleprint-core-misc.html" class="md-nav__link">
         
   
   
@@ -828,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../purpleprint-core-platform.html" class="md-nav__link">
+      <a href="../../core/api/purpleprint-core-platform.html" class="md-nav__link">
         
   
   
@@ -851,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../purpleprint-core-random.html" class="md-nav__link">
+      <a href="../../core/api/purpleprint-core-random.html" class="md-nav__link">
         
   
   
@@ -916,7 +914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../actors/purpleprint-core-manager-actor.html" class="md-nav__link">
+      <a href="../../core/api/actors/purpleprint-core-manager-actor.html" class="md-nav__link">
         
   
   
@@ -991,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../components/purpleprint-core-cable-component.html" class="md-nav__link">
+      <a href="../../core/api/components/purpleprint-core-cable-component.html" class="md-nav__link">
         
   
   
@@ -1014,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../components/purpleprint-core-manager-component.html" class="md-nav__link">
+      <a href="../../core/api/components/purpleprint-core-manager-component.html" class="md-nav__link">
         
   
   
@@ -1042,8 +1040,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1055,11 +1051,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_2_9" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_2_9" >
         
           
           <label class="md-nav__link" for="__nav_3_4_2_9" id="__nav_3_4_2_9_label" tabindex="0">
@@ -1075,7 +1071,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_4_2_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_4_2_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_4_2_9">
             <span class="md-nav__icon md-icon"></span>
             Player
@@ -1086,32 +1082,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    PurpleprintHUD.h
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="purpleprint-hud.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../core/api/player/purpleprint-hud.html" class="md-nav__link">
         
   
   
@@ -1122,44 +1096,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#classstruct-apurpleprinthud-inherits-from-ahud" class="md-nav__link">
-    <span class="md-ellipsis">
-      Class/Struct: APurpleprintHUD (inherits from AHUD)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#classstruct-apurpleprinthud" class="md-nav__link">
-    <span class="md-ellipsis">
-      Class/Struct: APurpleprintHUD
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1222,7 +1158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ui/purpleprint-user-widget.html" class="md-nav__link">
+      <a href="../../core/api/ui/purpleprint-user-widget.html" class="md-nav__link">
         
   
   
@@ -1287,7 +1223,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../path/index.html" class="md-nav__link ">
+            <a href="../../path/index.html" class="md-nav__link ">
               
   
   
@@ -1324,6 +1260,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1343,15 +1281,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../placer/index.html" class="md-nav__link ">
+            <a href="../index.html" class="md-nav__link ">
               
   
   
@@ -1372,7 +1310,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_6">
             <span class="md-nav__icon md-icon"></span>
             Placer
@@ -1388,7 +1326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../placer/installation.html" class="md-nav__link">
+      <a href="../installation.html" class="md-nav__link">
         
   
   
@@ -1410,6 +1348,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1425,15 +1365,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_3" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../placer/fixed/index.html" class="md-nav__link ">
+            <a href="index.html" class="md-nav__link md-nav__link--active">
               
   
   
@@ -1448,13 +1388,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_6_3" id="__nav_3_6_3_label" tabindex="0">
+              <label class="md-nav__link md-nav__link--active" for="__nav_3_6_3" id="__nav_3_6_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_6_3">
             <span class="md-nav__icon md-icon"></span>
             Fixed
@@ -1470,7 +1410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../placer/fixed/fixed-field.html" class="md-nav__link">
+      <a href="fixed-field.html" class="md-nav__link">
         
   
   
@@ -1525,7 +1465,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../placer/smart/index.html" class="md-nav__link ">
+            <a href="../smart/index.html" class="md-nav__link ">
               
   
   
@@ -1562,7 +1502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../placer/smart/smart-field.html" class="md-nav__link">
+      <a href="../smart/smart-field.html" class="md-nav__link">
         
   
   
@@ -1587,7 +1527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../placer/smart/smart-spline.html" class="md-nav__link">
+      <a href="../smart/smart-spline.html" class="md-nav__link">
         
   
   
@@ -1655,18 +1595,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#classstruct-apurpleprinthud-inherits-from-ahud" class="md-nav__link">
+  <a href="#actors" class="md-nav__link">
     <span class="md-ellipsis">
-      Class/Struct: APurpleprintHUD (inherits from AHUD)
+      Actors:
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#classstruct-apurpleprinthud" class="md-nav__link">
+  <a href="#assets" class="md-nav__link">
     <span class="md-ellipsis">
-      Class/Struct: APurpleprintHUD
+      Assets:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features:
     </span>
   </a>
   
@@ -1688,24 +1637,27 @@
 
 
 
-<h1 id="purpleprinthudh">PurpleprintHUD.h</h1>
-<h2 id="classstruct-apurpleprinthud-inherits-from-ahud">Class/Struct: APurpleprintHUD (inherits from AHUD)</h2>
+<h1 id="fixed-placer">Fixed Placer</h1>
+<p>The <strong>Fixed Placer</strong> is one of the containers for the <strong>Purpleprint Placer</strong> plugin can contain data like the Smart ones but is limited to represent it on the world with minimal features, is used as baker support from Dynamic ones and as container once you convert the level actors to instances.<br />
+This tool can be used too to import data from external software using the <a href="../../bridge">Bridge</a>.</p>
+<h2 id="actors">Actors:</h2>
 <ul>
-<li>✅ <code>void SetControlMode(bool bInGame);</code>  </li>
+<li><strong>Fixed Placer:</strong> This is the parent class for the fixed placers, contains most of the code, only use this if you know what you are doing.  </li>
+<li><strong>Fixed Field:</strong> Places baked objects in array formations with options for random offsets and rotations, perfect for more structured but varied asset placement. Can be spawned via the browser.  </li>
 </ul>
-<hr />
+<h2 id="assets">Assets:</h2>
 <ul>
-<li>✅ <code>void DisplayInGameMenu(bool bDisplay, bool bMenuCall = false);</code>  </li>
+<li><strong>Fixed Instance:</strong> Structure allows to set all the settings for normal actors, culling, light filtering, shadows, and almost all the elements you find by default in the engine.  </li>
+<li><strong>Fixed DataAsset:</strong> Container that can import data from external CSV files using <a href="../../bridge">Bridge</a> on LIVE, allows to define main core properties and can be used as prefab for you actors, if you drag &amp; drop it to the world, starting the 1.8+ will create by default a <strong>Fixed Field</strong>.</li>
 </ul>
-<hr />
-<h2 id="classstruct-apurpleprinthud">Class/Struct: APurpleprintHUD</h2>
+<h2 id="features">Features:</h2>
 <ul>
-<li>
-<p><code>UPurpleprintUserWidget* Widget;</code></p>
-</li>
-<li>
-<p><code>bool bMenuUIOnly = true;</code></p>
-</li>
+<li>Customize all the settings you have or almost all the settings for light, shadows, culling from normal actors.</li>
+<li>Can be used for static meshes, skeletal meshes, decals, particles, niagara particles and actors you want to.</li>
+<li>Can be used as container for all the other placer actors and world actors.</li>
+<li>The most lightweight from all the actors, can have thousan of instances while keep the performance.</li>
+<li>Supports world aligned shifting, so you can move the actor across the level and keep the instances in correct location.  </li>
+<li>Allows to shift the origin of the components whatever you want, per component and globally.  </li>
 </ul>
 
 
@@ -1856,12 +1808,12 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../..", "features": ["search.highlight", "search.suggest", "search.share", "navigation.indexes", "content.tabs.link", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "search.suggest", "search.share", "navigation.indexes", "content.tabs.link", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
-        <script src="../../../../assets/external/unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
+        <script src="../../../assets/external/unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
       
     
   </body>
