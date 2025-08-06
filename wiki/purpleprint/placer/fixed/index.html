@@ -1681,7 +1681,7 @@
 
 <h1 id="fixed-placer">Fixed Placer</h1>
 <hr />
-<p>The <strong>Fixed Placer</strong> is one of the containers for the <strong>Purpleprint Placer</strong> plugin can contain data like the Smart ones but is limited to represent it on the world with minimal features, is used as baker support from Dynamic ones and as container once you convert the level actors to instances.<br />
+<p>The <strong>Fixed Placer</strong> is one of the containers for the <strong>Purpleprint Placer</strong> plugin can contain data like the Smart ones but is limited to represent it on the world with minimal features, is used as baker support from dynamic ones and as container once you convert the level actors to instances.<br />
 This tool can be used too to import data from external software using the <a href="../../bridge">Bridge</a>.</p>
 <h2 id="actors">Actors:</h2>
 <ul>
@@ -1711,68 +1711,135 @@ This tool can be used too to import data from external software using the <a hre
 </ul>
 <hr />
 <h2 id="data-asset-support"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"/></svg></span> Data Asset Support</h2>
-<p>FixedDataAsset</p>
+<p>FixedDataAsset  </p>
 <table>
 <thead>
 <tr>
 <th>Property</th>
+<th>Category</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>DataAsset</code></td>
-<td>Reference to <code>UPurplePlacerFixedDataAsset</code></td>
+<td><code>CSV</code></td>
+<td>File</td>
+<td>Path to CSV file for import.</td>
 </tr>
 <tr>
-<td><code>bUseDataAsset</code></td>
-<td>Enables loading from external asset</td>
+<td><code>DataTable</code></td>
+<td>File</td>
+<td>Target DataTable to load transforms from.</td>
+</tr>
+<tr>
+<td><code>bUpdateDataTableFromCSV</code></td>
+<td>File</td>
+<td>Auto-update DataTable from CSV on load.</td>
+</tr>
+<tr>
+<td><code>bLoadAsSingleEntity</code></td>
+<td>File</td>
+<td>Treat entire CSV as a single instance.</td>
+</tr>
+<tr>
+<td><code>bLocationOnlyStruct</code></td>
+<td>File</td>
+<td>Only use location, ignore rot/scale.</td>
+</tr>
+<tr>
+<td><code>LocationOnlyTransform</code></td>
+<td>Transform</td>
+<td>Transform to apply to location-only data.</td>
+</tr>
+<tr>
+<td><code>ImportLocationScale</code></td>
+<td>Transform</td>
+<td>Scale multiplier for location.</td>
+</tr>
+<tr>
+<td><code>ImportScale</code></td>
+<td>Transform</td>
+<td>Scale for full transform imports.</td>
+</tr>
+<tr>
+<td><code>ImportInstancesMax</code></td>
+<td>Advanced</td>
+<td>Max number of instances to import.</td>
+</tr>
+<tr>
+<td><code>ImportTransformsPerInstanceMax</code></td>
+<td>Advanced</td>
+<td>Max transforms per instance.</td>
+</tr>
+<tr>
+<td><code>Instances</code></td>
+<td>Instances</td>
+<td>Array of fixed instances to place.</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="instance-configuration">Instance Configuration</h2>
-<h3 id="instance">Instance</h3>
-<p>FixedInstanceStruct, defines the template and behavior of a single instance.</p>
+<h3 id="instance"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6V5a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v1h-2V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v1H3v14h18V6m-2 12H5V8h14Z"/></svg></span> Instance</h3>
+<p>FixedInstanceStruct, defines the template and behavior of a single instance.  </p>
 <table>
 <thead>
 <tr>
 <th>Property</th>
+<th>Category</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td><code>Name</code></td>
+<td>Instance</td>
+<td>Identifier for the instance in a data table.</td>
+</tr>
+<tr>
 <td><code>Asset</code></td>
-<td>Main object (mesh, particle, etc.)</td>
+<td>Instance → Assets</td>
+<td>Asset to spawn (Mesh, Niagara, Actor, etc.).</td>
 </tr>
 <tr>
 <td><code>StaticMeshType</code></td>
-<td>Defines mesh instancing method: <code>Component</code>, <code>Instance</code>, <code>Hierarchical</code>.</td>
+<td>Assets → Mesh</td>
+<td>Static mesh usage type (Instance or Component).</td>
 </tr>
 <tr>
 <td><code>Materials</code></td>
-<td>Overrides for material assignment.</td>
+<td>Assets → Material</td>
+<td>Material overrides applied to the asset.</td>
 </tr>
 <tr>
 <td><code>Parameter</code></td>
-<td>Optional parameter for Niagara/particles.</td>
+<td>Assets → Particles</td>
+<td>Parameter name for particle systems.</td>
 </tr>
 <tr>
-<td><code>NumDecorators</code>, <code>Decorators</code></td>
-<td>Children/sub-instances attached to this one.</td>
+<td><code>TransformComponent</code></td>
+<td>Transform</td>
+<td>Base component transform.</td>
 </tr>
 <tr>
-<td><code>Physics</code></td>
-<td>Struct controlling collision, physics, mobility.</td>
-</tr>
-<tr>
-<td><code>Rendering</code></td>
-<td>Struct controlling visibility, LOD, shadowing, etc.</td>
+<td><code>TransformInstance</code></td>
+<td>Transform</td>
+<td>Instance transform to be applied on top.</td>
 </tr>
 <tr>
 <td><code>InstancesNum</code></td>
-<td>Runtime number of generated instances.</td>
+<td>Transform</td>
+<td>Total number of transforms (internal).</td>
+</tr>
+<tr>
+<td><code>Physics</code></td>
+<td>Physics</td>
+<td>Physics configuration struct.</td>
+</tr>
+<tr>
+<td><code>Rendering</code></td>
+<td>Rendering</td>
+<td>Rendering configuration struct.</td>
 </tr>
 </tbody>
 </table>
