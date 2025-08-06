@@ -2124,24 +2124,70 @@
 <hr />
 <h2 id="instance-types-and-distribution-modes">Instance Types and Distribution Modes</h2>
 <h3 id="placement-modes">Placement Modes</h3>
-<ul>
-<li><code>ePoint</code>: Random placement of instances at arbitrary points.</li>
-<li><code>eRandAreaBox</code>: Random placement inside a defined box volume.</li>
-<li><code>eRandAreaSphere</code>: Random placement inside a sphere.</li>
-<li><code>eGrid</code>: Grid-based structured layout.</li>
-<li><code>eManual</code>: Manual list of transforms.</li>
-<li><code>eScatter</code>: Placement over a mesh surface.</li>
-<li><code>eNiagara</code>: Driven by Niagara particle simulation (experimental).  </li>
-</ul>
-<p>List PurplePlacerArrayType.  </p>
+<p>(PurplePlacerArrayType)  </p>
+<table>
+<thead>
+<tr>
+<th>Enum Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ePoint</code></td>
+<td>Random placement of instances at arbitrary points.</td>
+</tr>
+<tr>
+<td><code>eRandAreaBox</code></td>
+<td>Random placement inside a defined box volume.</td>
+</tr>
+<tr>
+<td><code>eRandAreaSphere</code></td>
+<td>Random placement inside a sphere.</td>
+</tr>
+<tr>
+<td><code>eGrid</code></td>
+<td>Grid-based structured layout.</td>
+</tr>
+<tr>
+<td><code>eManual</code></td>
+<td>Manual list of transforms provided by user.</td>
+</tr>
+<tr>
+<td><code>eScatter</code></td>
+<td>Placement over a mesh surface.</td>
+</tr>
+<tr>
+<td><code>eNiagara</code></td>
+<td>Driven by Niagara particle simulation <em>(experimental)</em>.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="instance-picking-modes">Instance Picking Modes</h3>
-<ul>
-<li><code>eWeight</code>: Weighted random selection based on <code>Weight</code> parameter.</li>
-<li><code>eRandom</code>: Pure random selection.</li>
-<li><code>eLinear</code>: Sequentially selects instances in order.  </li>
-</ul>
-<p>List PurplePlacerRandomInstanceType.  </p>
-<h2 id="data-asset-support">Data Asset Support</h2>
+<p>(PurplePlacerRandomInstanceType)  </p>
+<table>
+<thead>
+<tr>
+<th>Enum Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>eWeight</code></td>
+<td>Weighted random selection based on each instance’s <code>Weight</code> value.</td>
+</tr>
+<tr>
+<td><code>eRandom</code></td>
+<td>Pure random selection across all available instances.</td>
+</tr>
+<tr>
+<td><code>eLinear</code></td>
+<td>Sequentially selects instances in the order they are listed.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="data-asset-support"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"/></svg></span> Data Asset Support</h2>
 <table>
 <thead>
 <tr>

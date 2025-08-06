@@ -1598,18 +1598,36 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#placement-modes" class="md-nav__link">
+  <a href="#spline-type" class="md-nav__link">
     <span class="md-ellipsis">
-      Placement Modes
+      Spline Type
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#instance-picking-modes" class="md-nav__link">
+  <a href="#radial-distribution-mode" class="md-nav__link">
     <span class="md-ellipsis">
-      Instance Picking Modes
+      Radial Distribution Mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#length-distribution-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Length Distribution Mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotation-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rotation Mode
     </span>
   </a>
   
@@ -1698,15 +1716,6 @@
   
     <nav class="md-nav" aria-label="Main Components &amp; Features">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#niagara-simulation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Niagara Simulation
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#area-configuration" class="md-nav__link">
@@ -1878,18 +1887,36 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#placement-modes" class="md-nav__link">
+  <a href="#spline-type" class="md-nav__link">
     <span class="md-ellipsis">
-      Placement Modes
+      Spline Type
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#instance-picking-modes" class="md-nav__link">
+  <a href="#radial-distribution-mode" class="md-nav__link">
     <span class="md-ellipsis">
-      Instance Picking Modes
+      Radial Distribution Mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#length-distribution-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Length Distribution Mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotation-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rotation Mode
     </span>
   </a>
   
@@ -1978,15 +2005,6 @@
   
     <nav class="md-nav" aria-label="Main Components &amp; Features">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#niagara-simulation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Niagara Simulation
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#area-configuration" class="md-nav__link">
@@ -2103,25 +2121,140 @@
 <p>This actor is highly modular and uses <code>PurplePlacerSmartInstanceStruct</code> to define the behavior, assets, and transformation of each placed instance. It is fully Blueprintable and includes various customization options under structured UPROPERTY categories.</p>
 <hr />
 <h2 id="instance-types-and-distribution-modes">Instance Types and Distribution Modes</h2>
-<h3 id="placement-modes">Placement Modes</h3>
-<ul>
-<li><code>ePoint</code>: Random placement of instances at arbitrary points.</li>
-<li><code>eRandAreaBox</code>: Random placement inside a defined box volume.</li>
-<li><code>eRandAreaSphere</code>: Random placement inside a sphere.</li>
-<li><code>eGrid</code>: Grid-based structured layout.</li>
-<li><code>eManual</code>: Manual list of transforms.</li>
-<li><code>eScatter</code>: Placement over a mesh surface.</li>
-<li><code>eNiagara</code>: Driven by Niagara particle simulation (experimental).  </li>
-</ul>
-<p>List PurplePlacerArrayType.  </p>
-<h3 id="instance-picking-modes">Instance Picking Modes</h3>
-<ul>
-<li><code>eWeight</code>: Weighted random selection based on <code>Weight</code> parameter.</li>
-<li><code>eRandom</code>: Pure random selection.</li>
-<li><code>eLinear</code>: Sequentially selects instances in order.  </li>
-</ul>
-<p>List PurplePlacerRandomInstanceType.  </p>
-<h2 id="data-asset-support">Data Asset Support</h2>
+<h3 id="spline-type">Spline Type</h3>
+<p>(PlacerSmartSplineType)  </p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>eRandom</code></td>
+<td>Instances are spawned randomly along the entire spline, based on user input.</td>
+</tr>
+<tr>
+<td><code>eDistributed</code></td>
+<td>Instances are distributed randomly but evenly across the spline.</td>
+</tr>
+<tr>
+<td><code>eSplinePoints</code></td>
+<td>One instance is spawned at each spline point, determined by the number of spline points.</td>
+</tr>
+<tr>
+<td><code>eDistance</code></td>
+<td>Instances are placed at regular intervals along the spline, based on a specified distance.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="radial-distribution-mode"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 16c0 2.8 2.2 5 5 5h2v-2H8c-1.7 0-3-1.3-3-3v-2H3zm18-8c0-2.8-2.2-5-5-5h-2v2h2c1.7 0 3 1.3 3 3v2h2zm-5 13c2.8 0 5-2.2 5-5v-2h-2v2c0 1.7-1.3 3-3 3h-2v2zM8 3C5.2 3 3 5.2 3 8v2h2V8c0-1.7 1.3-3 3-3h2V3z"/></svg></span> Radial Distribution Mode</h3>
+<p>(PlacerSmartSplineRadialDistributionMode)  </p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>eCircle</code></td>
+<td>Instances are aligned in a circular pattern.</td>
+</tr>
+<tr>
+<td><code>eBox</code></td>
+<td>Instances are aligned in a box pattern.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="length-distribution-mode"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17 3 5.25 4.5L17 12l5.25 4.5L17 21v-3h-2.74l-2.82-2.82 2.12-2.12L15.5 15H17V9h-1.5l-9 9H2v-3h3.26l9-9H17zM2 6h4.5l2.82 2.82-2.12 2.12L5.26 9H2z"/></svg></span> Length Distribution Mode</h3>
+<p>(PlacerSmartSplineLengthDistributionMode)  </p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>eUniform</code></td>
+<td>Instances are distributed uniformly along the spline.</td>
+</tr>
+<tr>
+<td><code>eIn</code></td>
+<td>Higher density of instances at the start of the spline.</td>
+</tr>
+<tr>
+<td><code>eEaseIn</code></td>
+<td>Gradually increases instance density towards the start of the spline.</td>
+</tr>
+<tr>
+<td><code>eMiddle</code></td>
+<td>More instances are placed in the middle section of the spline.</td>
+</tr>
+<tr>
+<td><code>eEaseInOut</code></td>
+<td>Instance density is higher in the middle, with smooth transitions at both ends.</td>
+</tr>
+<tr>
+<td><code>eSides</code></td>
+<td>More instances are placed at both the start and end of the spline.</td>
+</tr>
+<tr>
+<td><code>eEaseOut</code></td>
+<td>Gradually increases instance density towards the end of the spline.</td>
+</tr>
+<tr>
+<td><code>eOut</code></td>
+<td>Higher density of instances at the end of the spline.</td>
+</tr>
+<tr>
+<td><code>eNoise</code></td>
+<td>Instances are distributed at random locations along the spline, creating a noisy pattern.</td>
+</tr>
+<tr>
+<td><code>eWavy</code></td>
+<td>Instances follow a wavy distribution along the spline.</td>
+</tr>
+<tr>
+<td><code>eCustomCurve</code></td>
+<td>Distribution is defined by a custom user-provided curve.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rotation-mode"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.5 21.5c-3.25-1.56-5.59-4.74-5.95-8.5H.05C.56 19.16 5.71 24 12 24l.66-.03-3.81-3.81m5.98 1.03L2.81 9.17l6.36-6.36 12.02 12.02M10.23 1.75a1.49 1.49 0 0 0-2.12 0L1.75 8.11a1.49 1.49 0 0 0 0 2.12l12.02 12.02c.59.59 1.54.59 2.12 0l6.36-6.36c.59-.59.59-1.54 0-2.12zm6.27.75c3.25 1.57 5.59 4.74 5.95 8.5h1.5C23.44 4.84 18.29 0 12 0l-.66.03 3.81 3.81z"/></svg></span> Rotation Mode</h3>
+<p>(PlacerSmartSplineRotationMode)  </p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ePoint</code></td>
+<td>Uses the spline's rotation at each placement point.</td>
+</tr>
+<tr>
+<td><code>ePointsLerpLocation</code></td>
+<td>Interpolates rotation between spline points based on location.</td>
+</tr>
+<tr>
+<td><code>ePointsLerpRotation</code></td>
+<td>Interpolates rotation between spline points, blending their rotations.</td>
+</tr>
+<tr>
+<td><code>ePointTarget</code></td>
+<td>Orients instances to look in the direction of the spline at each point (uses point as a target).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="data-asset-support"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"/></svg></span> Data Asset Support</h2>
 <table>
 <thead>
 <tr>
@@ -2165,10 +2298,6 @@
 <tr>
 <td><code>SphereRadius</code>, <code>SphereBias</code></td>
 <td>Control for <code>RandAreaSphere</code></td>
-</tr>
-<tr>
-<td><code>ManualTransforms</code></td>
-<td>Manual list of transforms</td>
 </tr>
 </tbody>
 </table>
@@ -2323,18 +2452,10 @@ Inside Area|Transform|Offset.  </p>
 </table>
 <hr />
 <h2 id="main-components-features">Main Components &amp; Features</h2>
-<h3 id="niagara-simulation">Niagara Simulation</h3>
-<ul>
-<li><code>NiagaraSimulationComponent</code>: Runs Niagara simulations to place particles or other instances.</li>
-<li><code>ReceiveParticleData_Implementation</code>: Handles incoming particle data for placement.</li>
-<li><code>NiagaraAsset</code>, <code>bNiagaraInGame</code>, <code>NiagaraAssetLocParamName</code>, etc.: Configure how and when to capture and use Niagara particle data.</li>
-</ul>
 <h3 id="area-configuration">Area Configuration</h3>
 <ul>
-<li><code>ArrayType</code>: Defines the placement strategy (<code>Box</code>, <code>Grid</code>, <code>Scatter</code>, <code>Manual</code>, etc.).</li>
+<li><code>SplineType</code>: Defines the placement strategy (<code>Box</code>, <code>Grid</code>, <code>Scatter</code>, <code>Manual</code>, etc.).</li>
 <li><code>Num</code>, <code>SubNum</code>: Controls the number of main and child instances.</li>
-<li><code>BoxSize</code>, <code>SphereRadius</code>, <code>Grid</code>, etc.: Spatial dimensions and resolution for placement.</li>
-<li><code>ManualTransforms</code>: User-defined transforms for manual placement.</li>
 </ul>
 <h3 id="randomization-controls">Randomization Controls</h3>
 <ul>

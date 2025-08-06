@@ -1658,24 +1658,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#rendering" class="md-nav__link">
-    <span class="md-ellipsis">
-      Rendering
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#physics-collision" class="md-nav__link">
-    <span class="md-ellipsis">
-      Physics &amp; Collision
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1728,7 +1710,7 @@ This tool can be used too to import data from external software using the <a hre
 <li><code>DataAsset</code>: External data-driven asset to generate instances automatically.</li>
 </ul>
 <hr />
-<h2 id="data-asset-support">Data Asset Support</h2>
+<h2 id="data-asset-support"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"/></svg></span> Data Asset Support</h2>
 <p>FixedDataAsset</p>
 <table>
 <thead>
@@ -1791,86 +1773,6 @@ This tool can be used too to import data from external software using the <a hre
 <tr>
 <td><code>InstancesNum</code></td>
 <td>Runtime number of generated instances.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="rendering">Rendering</h3>
-<p>InstanceRenderingStruct, defines the global rendering parameters for light, shadows...</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>bCastShadow</code>, <code>bFarShadow</code>, <code>bDynamicShadow</code>, <code>bStaticShadow</code></td>
-<td>Shadow behavior</td>
-</tr>
-<tr>
-<td><code>bSelfShadowOnly</code>, <code>bCastHiddenShadow</code>, <code>bCastContactShadow</code></td>
-<td>Advanced shadowing options</td>
-</tr>
-<tr>
-<td><code>LightChannels</code></td>
-<td>Lighting channel configuration</td>
-</tr>
-<tr>
-<td><code>bReceivesDecals</code></td>
-<td>Controls decal reception</td>
-</tr>
-<tr>
-<td><code>DetailMode</code></td>
-<td>Render detail setting (low/med/high)</td>
-</tr>
-<tr>
-<td><code>DrawDistance</code>, <code>DrawScreenSize</code></td>
-<td>Visibility and LOD control</td>
-</tr>
-<tr>
-<td><code>bUseAsOccluder</code>, <code>bNeverDistanceCull</code></td>
-<td>Occlusion-related settings</td>
-</tr>
-</tbody>
-</table>
-<h3 id="physics-collision">Physics &amp; Collision</h3>
-<p>InstancePhysicsStruct, defined physics, collisions and states. </p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Mobility</code></td>
-<td>Component mobility (<code>Static</code>, <code>Movable</code>, etc.)</td>
-</tr>
-<tr>
-<td><code>CollisionProfile</code></td>
-<td>Enum for preset collision types</td>
-</tr>
-<tr>
-<td><code>CollisionProfileName</code></td>
-<td>FName for custom profile</td>
-</tr>
-<tr>
-<td><code>Collision</code>, <code>CollisionChannel</code></td>
-<td>Collision settings</td>
-</tr>
-<tr>
-<td><code>bSimulatePhysics</code></td>
-<td>Enable physics simulation</td>
-</tr>
-<tr>
-<td><code>bEnableGravity</code></td>
-<td>Enable gravity if physics is on</td>
-</tr>
-<tr>
-<td><code>MassScale</code>, <code>LinearDamping</code>, <code>AngularDamping</code></td>
-<td>Physics body parameters</td>
 </tr>
 </tbody>
 </table>
