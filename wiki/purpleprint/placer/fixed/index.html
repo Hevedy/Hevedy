@@ -1621,6 +1621,66 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#instance-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instance System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-asset-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Asset Support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instance-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instance Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instance Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rendering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rendering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physics-collision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physics &amp; Collision
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1638,6 +1698,7 @@
 
 
 <h1 id="fixed-placer">Fixed Placer</h1>
+<hr />
 <p>The <strong>Fixed Placer</strong> is one of the containers for the <strong>Purpleprint Placer</strong> plugin can contain data like the Smart ones but is limited to represent it on the world with minimal features, is used as baker support from Dynamic ones and as container once you convert the level actors to instances.<br />
 This tool can be used too to import data from external software using the <a href="../../bridge">Bridge</a>.</p>
 <h2 id="actors">Actors:</h2>
@@ -1659,6 +1720,161 @@ This tool can be used too to import data from external software using the <a hre
 <li>Supports world aligned shifting, so you can move the actor across the level and keep the instances in correct location.  </li>
 <li>Allows to shift the origin of the components whatever you want, per component and globally.  </li>
 </ul>
+<hr />
+<h2 id="instance-system">Instance System</h2>
+<ul>
+<li><code>Instances</code>: List of dynamic instance definitions used for placement.</li>
+<li><code>DefaultInstance</code>: Fallback or template instance definition.</li>
+<li><code>DataAsset</code>: External data-driven asset to generate instances automatically.</li>
+</ul>
+<hr />
+<h2 id="data-asset-support">Data Asset Support</h2>
+<p>FixedDataAsset</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DataAsset</code></td>
+<td>Reference to <code>UPurplePlacerFixedDataAsset</code></td>
+</tr>
+<tr>
+<td><code>bUseDataAsset</code></td>
+<td>Enables loading from external asset</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="instance-configuration">Instance Configuration</h2>
+<h3 id="instance">Instance</h3>
+<p>FixedInstanceStruct, defines the template and behavior of a single instance.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Asset</code></td>
+<td>Main object (mesh, particle, etc.)</td>
+</tr>
+<tr>
+<td><code>StaticMeshType</code></td>
+<td>Defines mesh instancing method: <code>Component</code>, <code>Instance</code>, <code>Hierarchical</code>.</td>
+</tr>
+<tr>
+<td><code>Materials</code></td>
+<td>Overrides for material assignment.</td>
+</tr>
+<tr>
+<td><code>Parameter</code></td>
+<td>Optional parameter for Niagara/particles.</td>
+</tr>
+<tr>
+<td><code>NumDecorators</code>, <code>Decorators</code></td>
+<td>Children/sub-instances attached to this one.</td>
+</tr>
+<tr>
+<td><code>Physics</code></td>
+<td>Struct controlling collision, physics, mobility.</td>
+</tr>
+<tr>
+<td><code>Rendering</code></td>
+<td>Struct controlling visibility, LOD, shadowing, etc.</td>
+</tr>
+<tr>
+<td><code>InstancesNum</code></td>
+<td>Runtime number of generated instances.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rendering">Rendering</h3>
+<p>InstanceRenderingStruct, defines the global rendering parameters for light, shadows...</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bCastShadow</code>, <code>bFarShadow</code>, <code>bDynamicShadow</code>, <code>bStaticShadow</code></td>
+<td>Shadow behavior</td>
+</tr>
+<tr>
+<td><code>bSelfShadowOnly</code>, <code>bCastHiddenShadow</code>, <code>bCastContactShadow</code></td>
+<td>Advanced shadowing options</td>
+</tr>
+<tr>
+<td><code>LightChannels</code></td>
+<td>Lighting channel configuration</td>
+</tr>
+<tr>
+<td><code>bReceivesDecals</code></td>
+<td>Controls decal reception</td>
+</tr>
+<tr>
+<td><code>DetailMode</code></td>
+<td>Render detail setting (low/med/high)</td>
+</tr>
+<tr>
+<td><code>DrawDistance</code>, <code>DrawScreenSize</code></td>
+<td>Visibility and LOD control</td>
+</tr>
+<tr>
+<td><code>bUseAsOccluder</code>, <code>bNeverDistanceCull</code></td>
+<td>Occlusion-related settings</td>
+</tr>
+</tbody>
+</table>
+<h3 id="physics-collision">Physics &amp; Collision</h3>
+<p>InstancePhysicsStruct, defined physics, collisions and states. </p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Mobility</code></td>
+<td>Component mobility (<code>Static</code>, <code>Movable</code>, etc.)</td>
+</tr>
+<tr>
+<td><code>CollisionProfile</code></td>
+<td>Enum for preset collision types</td>
+</tr>
+<tr>
+<td><code>CollisionProfileName</code></td>
+<td>FName for custom profile</td>
+</tr>
+<tr>
+<td><code>Collision</code>, <code>CollisionChannel</code></td>
+<td>Collision settings</td>
+</tr>
+<tr>
+<td><code>bSimulatePhysics</code></td>
+<td>Enable physics simulation</td>
+</tr>
+<tr>
+<td><code>bEnableGravity</code></td>
+<td>Enable gravity if physics is on</td>
+</tr>
+<tr>
+<td><code>MassScale</code>, <code>LinearDamping</code>, <code>AngularDamping</code></td>
+<td>Physics body parameters</td>
+</tr>
+</tbody>
+</table>
+<hr />
 
 
 

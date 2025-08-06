@@ -1621,6 +1621,75 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#instance-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instance System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-asset-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Asset Support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instance-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instance Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instance Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trace
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Notes
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1638,6 +1707,7 @@
 
 
 <h1 id="smart-placer">Smart Placer</h1>
+<hr />
 <p>The <strong>Smart Placer</strong> is the dynamic containers for the <strong>Purpleprint Placer</strong> plugin can contain data and generate it with random placement and almost procedural systems allowing to spawn even sub actors of the same type and decorators around the instances, everything is properly calibrated and stored as instance for performance.  </p>
 <h2 id="actors">Actors:</h2>
 <ul>
@@ -1659,6 +1729,284 @@
 <li>Different alignment traces so you can align the actors to surfaces of any kind, walls, floors, ceilings...</li>
 <li>Options of you taste to define areas, shape them as you wish with hollow and side options.</li>
 <li>Bias and masking per axis for fine control of spawn.</li>
+</ul>
+<hr />
+<h2 id="instance-system">Instance System</h2>
+<ul>
+<li><code>Instances</code>: List of dynamic instance definitions used for placement.</li>
+<li><code>DefaultInstance</code>: Fallback or template instance definition.</li>
+<li><code>DataAsset</code>: External data-driven asset to generate instances automatically.</li>
+</ul>
+<hr />
+<h2 id="data-asset-support">Data Asset Support</h2>
+<p>SmartDataAsset  </p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DataAsset</code></td>
+<td>Reference to <code>UPurplePlacerSmartDataAsset</code></td>
+</tr>
+<tr>
+<td><code>bUseDataAsset</code></td>
+<td>Enables loading from external asset</td>
+</tr>
+<tr>
+<td><code>GenerateInstancesFromAssets()</code></td>
+<td>Function to auto-generate instance definitions from asset list</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="instance-configuration">Instance Configuration</h2>
+<h3 id="instance">Instance</h3>
+<p>SmartInstanceStruct, defines the template and behavior of a single instance.  </p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Asset</code></td>
+<td>Main object (mesh, particle, etc.)</td>
+</tr>
+<tr>
+<td><code>StaticMeshType</code></td>
+<td>Defines mesh instancing method: <code>Component</code>, <code>Instance</code>, <code>Hierarchical</code>.</td>
+</tr>
+<tr>
+<td><code>Materials</code></td>
+<td>Overrides for material assignment.</td>
+</tr>
+<tr>
+<td><code>Parameter</code></td>
+<td>Optional parameter for Niagara/particles.</td>
+</tr>
+<tr>
+<td><code>NumDecorators</code>, <code>Decorators</code></td>
+<td>Children/sub-instances attached to this one.</td>
+</tr>
+<tr>
+<td><code>Transform</code></td>
+<td>Struct controlling instance transform rules.</td>
+</tr>
+<tr>
+<td><code>Physics</code></td>
+<td>Struct controlling collision, physics, mobility.</td>
+</tr>
+<tr>
+<td><code>Rendering</code></td>
+<td>Struct controlling visibility, LOD, shadowing, etc.</td>
+</tr>
+<tr>
+<td><code>InstancesNum</code></td>
+<td>Runtime number of generated instances.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="transform"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 2 4 4h-3v7.85l6.53 3.76L21 15.03l1.5 5.47-5.5 1.46 1.53-2.61L12 15.58l-6.53 3.77L7 21.96 1.5 20.5 3 15.03l1.47 2.58L11 13.85V6H8z"/></svg></span> Transform</h3>
+<p>InstanceTransformStruct, defines the global rendering parameters for light, shadows...  </p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Category</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TransformComponent</code></td>
+<td>Transform</td>
+<td>Global transform applied to all instances.</td>
+</tr>
+<tr>
+<td><code>TransformInstance</code></td>
+<td>Transform</td>
+<td>Per-instance transform offset.</td>
+</tr>
+<tr>
+<td><code>Origin</code></td>
+<td>Transform</td>
+<td>Reference point for bounding calculations.</td>
+</tr>
+<tr>
+<td><code>Extend</code></td>
+<td>Transform</td>
+<td>Optional override for bounding box extents.</td>
+</tr>
+<tr>
+<td><code>RandomLocation</code></td>
+<td>Transform\Random</td>
+<td>Min/Max range for random location.</td>
+</tr>
+<tr>
+<td><code>bUseLocationList</code></td>
+<td>Transform\Random</td>
+<td>Whether to use predefined location list.</td>
+</tr>
+<tr>
+<td><code>LocationList</code></td>
+<td>Transform\Random</td>
+<td>List of predefined random locations.</td>
+</tr>
+<tr>
+<td><code>RandomRotation</code></td>
+<td>Transform\Random</td>
+<td>Min/Max rotation (Pitch, Yaw, Roll).</td>
+</tr>
+<tr>
+<td><code>bUseRotationList</code></td>
+<td>Transform\Random</td>
+<td>Use predefined rotations instead of random.</td>
+</tr>
+<tr>
+<td><code>RotationList</code></td>
+<td>Transform\Random</td>
+<td>List of fixed rotation values.</td>
+</tr>
+<tr>
+<td><code>RandomScale</code></td>
+<td>Transform\Random</td>
+<td>Min/Max uniform or non-uniform scale.</td>
+</tr>
+<tr>
+<td><code>bRandomScaleUniform</code></td>
+<td>Transform\Random</td>
+<td>If true, uses X for uniform scale.</td>
+</tr>
+<tr>
+<td><code>bUseScaleList</code></td>
+<td>Transform\Random</td>
+<td>Use predefined scales instead of random.</td>
+</tr>
+<tr>
+<td><code>ScaleList</code></td>
+<td>Transform\Random</td>
+<td>List of specific scale vectors.</td>
+</tr>
+<tr>
+<td><code>TargetActor</code></td>
+<td>Transform\Target</td>
+<td>Actor to face/look at.</td>
+</tr>
+<tr>
+<td><code>bTargetActorInvertTransform</code></td>
+<td>Transform\Target</td>
+<td>Invert the look-at direction.</td>
+</tr>
+<tr>
+<td><code>TargetRotationMask</code></td>
+<td>Transform\Target</td>
+<td>Per-axis rotation mask.</td>
+</tr>
+<tr>
+<td><code>Trace</code></td>
+<td>Transform\Trace</td>
+<td>Trace alignment settings (surface detection, etc.).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="trace"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-4 4v-3H6.83A2.99 2.99 0 0 1 4 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3c1.31 0 2.42.83 2.83 2H19V8z"/></svg></span> Trace</h3>
+<p>TraceAlignStruct, defined the tracing options to align the instance to the world.  </p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Category</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Origin</code></td>
+<td>Trace</td>
+<td>Starting point of the trace. Only used when <code>Direction == eCustom</code>.</td>
+</tr>
+<tr>
+<td><code>Length</code></td>
+<td>Trace</td>
+<td>Trace distance. Ignored when <code>Direction == eFree</code>.</td>
+</tr>
+<tr>
+<td><code>Direction</code></td>
+<td>Trace</td>
+<td>Alignment axis mode: <code>eFree</code>, <code>eCustom</code>, or others. If <code>eFree</code>, trace is skipped.</td>
+</tr>
+<tr>
+<td><code>DirectionVector</code></td>
+<td>Trace</td>
+<td>Custom trace direction (used only with <code>eCustom</code>).</td>
+</tr>
+<tr>
+<td><code>Channel</code></td>
+<td>Trace</td>
+<td>Collision channel used for the trace (e.g., Visibility, WorldStatic).</td>
+</tr>
+<tr>
+<td><code>bComplex</code></td>
+<td>Trace</td>
+<td>If true, uses complex collision (triangle mesh).</td>
+</tr>
+<tr>
+<td><code>bIgnoreSelf</code></td>
+<td>Trace</td>
+<td>Ignores the actor that owns the trace component.</td>
+</tr>
+<tr>
+<td><code>ActorsToIgnore</code></td>
+<td>Actors</td>
+<td>List of additional actors to ignore during trace.</td>
+</tr>
+<tr>
+<td><code>bAlignNormal</code></td>
+<td>Align</td>
+<td>If true, aligns the instance with the hit surface's normal.</td>
+</tr>
+<tr>
+<td><code>AlignNormalMask</code></td>
+<td>Align</td>
+<td>Vector mask used to limit normal alignment to specific axes (e.g., Z only).</td>
+</tr>
+<tr>
+<td><code>bUseTraceDirection</code></td>
+<td>Align</td>
+<td>If true, uses the trace direction instead of the normal for alignment.</td>
+</tr>
+<tr>
+<td><code>TraceOffset</code></td>
+<td>Align</td>
+<td>Additional offset from hit location. Useful for offsetting above the surface.</td>
+</tr>
+<tr>
+<td><code>bPostHitApplyLocation</code></td>
+<td>Align</td>
+<td>Applies final location after trace hit.</td>
+</tr>
+<tr>
+<td><code>bPostHitApplyRotation</code></td>
+<td>Align</td>
+<td>Applies final rotation after trace hit.</td>
+</tr>
+<tr>
+<td><code>bDebug</code></td>
+<td>Debug</td>
+<td>If true, enables drawing of debug line/traces in editor/game.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="additional-notes">Additional Notes</h2>
+<ul>
+<li>Those elements are shared across all the smart placer tools.</li>
 </ul>
 
 

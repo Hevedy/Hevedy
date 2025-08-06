@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Procedural elements placer, work with static meshes, decals, particles, particle attributes and custom actors.">
+        <meta name="description" content="Procedural and semi-procedural placement of instances in various spatial configurations, including box, sphere, grid, scatter, or from Niagara simulations.">
       
       
       
@@ -1556,27 +1556,231 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#actors" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Actors:
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#assets" class="md-nav__link">
+  <a href="#instance-types-and-distribution-modes" class="md-nav__link">
     <span class="md-ellipsis">
-      Assets:
+      Instance Types and Distribution Modes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instance Types and Distribution Modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#placement-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Placement Modes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance-picking-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instance Picking Modes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-asset-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Asset Support
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
+  <a href="#area-distribution-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      Features:
+      Area &amp; Distribution Settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Area &amp; Distribution Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Transform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#randomized-transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Randomized Transform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grid-offsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grid Offsets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#niagara-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Niagara Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utility-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utility Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editor-overrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editor Overrides
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-components-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main Components &amp; Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Main Components &amp; Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#niagara-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Niagara Simulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#area-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Area Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#randomization-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Randomization Controls
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transform-offset-customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transform &amp; Offset Customization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instance-placement-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instance Placement Logic
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instance Placement Logic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-instances" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Instances
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utility-editor-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utility &amp; Editor Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-asset-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Asset Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editor-only-debug-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editor-Only &amp; Debug Tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Notes
     </span>
   </a>
   
@@ -1666,27 +1870,231 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#actors" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Actors:
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#assets" class="md-nav__link">
+  <a href="#instance-types-and-distribution-modes" class="md-nav__link">
     <span class="md-ellipsis">
-      Assets:
+      Instance Types and Distribution Modes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instance Types and Distribution Modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#placement-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Placement Modes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance-picking-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instance Picking Modes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-asset-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Asset Support
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
+  <a href="#area-distribution-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      Features:
+      Area &amp; Distribution Settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Area &amp; Distribution Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Transform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#randomized-transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Randomized Transform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grid-offsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grid Offsets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#niagara-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Niagara Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utility-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utility Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editor-overrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editor Overrides
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-components-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main Components &amp; Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Main Components &amp; Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#niagara-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Niagara Simulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#area-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Area Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#randomization-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Randomization Controls
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transform-offset-customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transform &amp; Offset Customization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instance-placement-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instance Placement Logic
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instance Placement Logic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-instances" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Instances
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utility-editor-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utility &amp; Editor Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-asset-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Asset Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editor-only-debug-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editor-Only &amp; Debug Tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Notes
     </span>
   </a>
   
@@ -1709,28 +2117,367 @@
 
 
 <h1 id="smart-field-placer">Smart Field Placer</h1>
-<p>The <strong>Smart Placer</strong> is one of the containers for the <strong>Purpleprint Placer</strong> plugin can contain data like the Smart ones but is limited to represent it on the world with minimal features, is used as baker support from Dynamic ones and as container once you convert the level actors to instances.<br />
-This tool can be used too to import data from external software using the <a href="../../bridge">Bridge</a>.</p>
-<h2 id="actors">Actors:</h2>
+<hr />
+<h2 id="overview">Overview</h2>
+<p><code>PurplePlacerSmartFieldActor</code> is a powerful Unreal Engine actor used for dynamically placing instances of meshes, particles, decals, and actors based on customizable spatial rules and transform logic. This actor supports randomization, data assets, Niagara simulation integration, and several custom placement strategies, such as area-based (box, sphere), manual points, or scatter.</p>
+<p>This actor is highly modular and uses <code>PurplePlacerSmartInstanceStruct</code> to define the behavior, assets, and transformation of each placed instance. It is fully Blueprintable and includes various customization options under structured UPROPERTY categories.</p>
+<hr />
+<h2 id="instance-types-and-distribution-modes">Instance Types and Distribution Modes</h2>
+<h3 id="placement-modes">Placement Modes</h3>
 <ul>
-<li><strong>Smart Placer:</strong> This is the parent class for the smart placers, contains most of the code, only use this if you know what you are doing.  </li>
-<li><strong>Smart Field:</strong> Can generate big amoung of instances in different options, like grids, points, random location, using Niagara, as scatter using a static mesh and others, supported by a big list of modificators and offset tools for random offsets and rotations, perfect for more structured but varied asset placement. Can be spawned via the browser.  </li>
-<li><strong>Smart Spline:</strong> Generate instances across splines, with almost the same settings from Field, plus extra elements to control the spline transform and rotations in many different ways, including noise placers and more tool. Perfect for details across roads, floors, wall details, floating elements in space and many others. Can be spawned via the browser.  </li>
+<li><code>ePoint</code>: Random placement of instances at arbitrary points.</li>
+<li><code>eRandAreaBox</code>: Random placement inside a defined box volume.</li>
+<li><code>eRandAreaSphere</code>: Random placement inside a sphere.</li>
+<li><code>eGrid</code>: Grid-based structured layout.</li>
+<li><code>eManual</code>: Manual list of transforms.</li>
+<li><code>eScatter</code>: Placement over a mesh surface.</li>
+<li><code>eNiagara</code>: Driven by Niagara particle simulation (experimental).  </li>
 </ul>
-<h2 id="assets">Assets:</h2>
+<p>List PurplePlacerArrayType.  </p>
+<h3 id="instance-picking-modes">Instance Picking Modes</h3>
 <ul>
-<li><strong>Smart Instance:</strong> Structure allows to define traces, complete transforms and all the settings for normal actors, culling, light filtering, shadows, and almost all the elements you find by default in the engine.  </li>
-<li><strong>Smart DataAsset:</strong> Container that can generate instances based on a list of assets you provide, can be used as prefab for you actors, if you drag &amp; drop it to the world, starting the 2.0 will create by default a <strong>Smart Placer</strong>.</li>
+<li><code>eWeight</code>: Weighted random selection based on <code>Weight</code> parameter.</li>
+<li><code>eRandom</code>: Pure random selection.</li>
+<li><code>eLinear</code>: Sequentially selects instances in order.  </li>
 </ul>
-<h2 id="features">Features:</h2>
+<p>List PurplePlacerRandomInstanceType.  </p>
+<h2 id="data-asset-support">Data Asset Support</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DataAsset</code></td>
+<td>Reference to <code>UPurplePlacerSmartDataAsset</code></td>
+</tr>
+<tr>
+<td><code>bUseDataAsset</code></td>
+<td>Enables loading from external asset</td>
+</tr>
+<tr>
+<td><code>GenerateInstancesFromAssets()</code></td>
+<td>Function to auto-generate instance definitions from asset list</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="area-distribution-settings">Area &amp; Distribution Settings</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ArrayType</code></td>
+<td>Placement mode (<code>Grid</code>, <code>Scatter</code>, etc.)</td>
+</tr>
+<tr>
+<td><code>Num</code>, <code>SubNum</code></td>
+<td>Number of instances and sub-instances</td>
+</tr>
+<tr>
+<td><code>BoxSize</code>, <code>BoxBias</code></td>
+<td>Volume control for <code>RandAreaBox</code></td>
+</tr>
+<tr>
+<td><code>SphereRadius</code>, <code>SphereBias</code></td>
+<td>Control for <code>RandAreaSphere</code></td>
+</tr>
+<tr>
+<td><code>Grid</code>, <code>GridCellSize</code>, <code>GridCellOrigin</code></td>
+<td>Defines resolution and layout for <code>Grid</code></td>
+</tr>
+<tr>
+<td><code>ManualTransforms</code></td>
+<td>Manual list of transforms</td>
+</tr>
+<tr>
+<td><code>ScatterStaticMeshAsset</code>, <code>ScatterMeshTransform</code></td>
+<td>Mesh and transform used for <code>Scatter</code></td>
+</tr>
+<tr>
+<td><code>ScatterDepthOffset</code></td>
+<td>Depth offset for scattered placements</td>
+</tr>
+<tr>
+<td><code>ScatterAlignToSurface</code>, <code>ScatterDirection</code>, <code>ScatterCustomDirectionVector</code></td>
+<td>Surface alignment controls</td>
+</tr>
+<tr>
+<td><code>ScatterDirectionThreshold</code></td>
+<td>Angle tolerance for alignment</td>
+</tr>
+<tr>
+<td><code>bShowArea</code></td>
+<td>Toggles debug draw of area in editor</td>
+</tr>
+</tbody>
+</table>
+<h3 id="general-transform">General Transform</h3>
+<p>Inside Area|Transform.  </p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ActorTransform</code></td>
+<td>Global transform of the actor.</td>
+</tr>
+<tr>
+<td><code>ActorOrigin</code></td>
+<td>Relative origin offset.</td>
+</tr>
+<tr>
+<td><code>ActorExtend</code></td>
+<td>Calculated bounding box size.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="randomized-transform">Randomized Transform</h3>
+<p>Inside Area|Transform|Random.  </p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>RandomLocation</code>, <code>RandomRotation</code>, <code>RandomScale</code></td>
+<td>FBox ranges for randomization.</td>
+</tr>
+<tr>
+<td><code>bUseLocationList</code>, <code>bUseRotationList</code>, <code>bUseScaleList</code></td>
+<td>Enables list-based override.</td>
+</tr>
+<tr>
+<td><code>LocationList</code>, <code>RotationList</code>, <code>ScaleList</code></td>
+<td>Predefined values for deterministic transform input.</td>
+</tr>
+<tr>
+<td><code>bRandomScaleUniform</code></td>
+<td>Forces uniform scaling when using random.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="grid-offsets">Grid Offsets</h3>
+<p>Used when <code>ArrayType = Grid</code> or X used globally for the rest of types.<br />
+Inside Area|Transform|Offset  </p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GridOffsetX/Y/Z</code></td>
+<td>Arrays of <code>FTransform</code> applied along respective axis.</td>
+</tr>
+<tr>
+<td><code>bGridOffsetLoopX/Y/Z</code></td>
+<td>Enables wrap-around looping of offsets.</td>
+</tr>
+<tr>
+<td><code>bGridOffsetLoopLockX/Y/Z</code></td>
+<td>Restricts looping to only that axis.</td>
+</tr>
+<tr>
+<td><code>GridOffsetAccumulativeX/Y/Z</code></td>
+<td>Bitmask control to enable cumulative offset per iteration.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="niagara-integration">Niagara Integration</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NiagaraSimulationComponent</code></td>
+<td>Niagara simulation driver component</td>
+</tr>
+<tr>
+<td><code>NiagaraAsset</code></td>
+<td>Niagara system to simulate</td>
+</tr>
+<tr>
+<td><code>bNiagaraInGame</code>, <code>bNiagaraOnConstructor</code></td>
+<td>Control whether to simulate in game or editor</td>
+</tr>
+<tr>
+<td><code>bNiagaraAssetIncludeRotation/Scale</code></td>
+<td>Toggles parameter capture for rotation/scale</td>
+</tr>
+<tr>
+<td><code>NiagaraAssetLocParamName</code>, <code>RotParamName</code>, <code>ScaleParamName</code></td>
+<td>Custom parameter names for capture</td>
+</tr>
+<tr>
+<td><code>NiagaraBakeSimulation()</code>, <code>Restart()</code>, <code>Stop()</code></td>
+<td>Call-in-editor tools to control simulation baking</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="utility-functions">Utility Functions</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Bake()</code> / <code>UnBake()</code></td>
+<td>Finalize or reset the placement setup</td>
+</tr>
+<tr>
+<td><code>Update()</code> / <code>Refresh()</code></td>
+<td>Regenerates internal data</td>
+</tr>
+<tr>
+<td><code>ClearAllInstances()</code></td>
+<td>Deletes all runtime instances</td>
+</tr>
+<tr>
+<td><code>ReplaceInstancesDataWithDefaultInstanceData()</code></td>
+<td>Resets to default configuration</td>
+</tr>
+<tr>
+<td><code>GetAllDynamicInstances()</code> / <code>GetAllStaticInstances()</code></td>
+<td>Returns array of instance structs</td>
+</tr>
+<tr>
+<td><code>ComponentsToActors()</code> / <code>ActorsToStaticInstancesList()</code></td>
+<td>Conversion tools</td>
+</tr>
+<tr>
+<td><code>ParseDataNiagara()</code></td>
+<td>Parses transform data from Niagara particles</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="editor-overrides">Editor Overrides</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PostEditChangeProperty()</code></td>
+<td>Responds to property changes in editor</td>
+</tr>
+<tr>
+<td><code>Tick()</code></td>
+<td>Called every frame</td>
+</tr>
+<tr>
+<td><code>OnConstruction()</code></td>
+<td>Called on actor placement</td>
+</tr>
+<tr>
+<td><code>BeginPlay()</code>, <code>EndPlay()</code></td>
+<td>Runtime initialization and cleanup</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="main-components-features">Main Components &amp; Features</h2>
+<h3 id="niagara-simulation">Niagara Simulation</h3>
 <ul>
-<li>Customize all the settings you have or almost all the settings for light, shadows, culling from normal actors.</li>
-<li>Can be used for static meshes, skeletal meshes, decals, particles, niagara particles and actors you want to, included sub actors of Smart Placer.</li>
-<li>Allows to shift the origin of the components whatever you want, per component and per instance and globally.  </li>
-<li>Complete suite for random placement and almost procedural systems allowing to spawn even sub actors of the same type and decorators around the instances, everything is properly calibrated and stored as instance for performance.</li>
-<li>Different alignment traces so you can align the actors to surfaces of any kind, walls, floors, ceilings...</li>
-<li>Options of you taste to define areas, shape them as you wish with hollow and side options.</li>
-<li>Bias and masking per axis for fine control of spawn.</li>
+<li><code>NiagaraSimulationComponent</code>: Runs Niagara simulations to place particles or other instances.</li>
+<li><code>ReceiveParticleData_Implementation</code>: Handles incoming particle data for placement.</li>
+<li><code>NiagaraAsset</code>, <code>bNiagaraInGame</code>, <code>NiagaraAssetLocParamName</code>, etc.: Configure how and when to capture and use Niagara particle data.</li>
+</ul>
+<h3 id="area-configuration">Area Configuration</h3>
+<ul>
+<li><code>ArrayType</code>: Defines the placement strategy (<code>Box</code>, <code>Grid</code>, <code>Scatter</code>, <code>Manual</code>, etc.).</li>
+<li><code>Num</code>, <code>SubNum</code>: Controls the number of main and child instances.</li>
+<li><code>BoxSize</code>, <code>SphereRadius</code>, <code>Grid</code>, etc.: Spatial dimensions and resolution for placement.</li>
+<li><code>ManualTransforms</code>: User-defined transforms for manual placement.</li>
+</ul>
+<h3 id="randomization-controls">Randomization Controls</h3>
+<ul>
+<li><code>RandomLocation</code>, <code>RandomRotation</code>, <code>RandomScale</code>: Controls randomized positioning.</li>
+<li><code>bUseLocationList</code>, <code>bUseRotationList</code>, <code>bUseScaleList</code>: Allows switching between list-based or pure random generation.</li>
+<li><code>LocationList</code>, <code>RotationList</code>, <code>ScaleList</code>: Lists for controlled random transforms.</li>
+</ul>
+<hr />
+<h2 id="transform-offset-customization">Transform &amp; Offset Customization</h2>
+<p>The actor provides several properties under the <code>Transform</code> category:</p>
+<ul>
+<li><code>ActorTransform</code>, <code>ActorOrigin</code>, <code>ActorExtend</code>: Defines the actor’s spatial properties.</li>
+</ul>
+<p>These parameters allow fine-grained control over placement in each axis when working with grid-type distributions.</p>
+<ul>
+<li>Axis-specific offset transforms (<code>GridOffsetX</code>, <code>GridOffsetY</code>, <code>GridOffsetZ</code>): Fine control over instance position in a grid.</li>
+<li><code>GridOffsetLoopX/Y/Z</code>, <code>GridOffsetAccumulativeX/Y/Z</code>: Looping and accumulation options for offsets.
+If enabled, loops through the offsets even if the number of instances exceeds the array size.</li>
+<li><code>bGridOffsetLoopLockX/Y/Z</code>: Locks looping to just the specific axis. Useful for keeping consistent transformations in multi-axis layouts.</li>
+<li><code>FPurplePlacerTransformBitMask</code> used to accumulate offsets per instance in a specific axis.</li>
+</ul>
+<p>These control whether each offset is added cumulatively (stacked) or used in isolation.</p>
+<hr />
+<h2 id="instance-placement-logic">Instance Placement Logic</h2>
+<h3 id="dynamic-instances">Dynamic Instances</h3>
+<p>Functions and flags related to procedural placement:</p>
+<ul>
+<li><code>ConstructDynamicInstances_Implementation(...)</code></li>
+<li><code>TransformDynamicInstances_Implementation(...)</code></li>
+<li><code>BuildDynamicInstances_Implementation(...)</code></li>
+</ul>
+<hr />
+<h2 id="utility-editor-functions">Utility &amp; Editor Functions</h2>
+<ul>
+<li><code>Bake()</code>, <code>UnBake()</code>: Prepare or clear instance placements.</li>
+<li><code>Refresh()</code>, <code>Update()</code>: Used to regenerate or force rebuild of placement logic.</li>
+<li><code>ClearAllInstances()</code>: Removes all placed instances.</li>
+<li><code>GetAllStaticInstances()</code>, <code>GetAllDynamicInstances()</code>: Retrieve instance data.</li>
+<li><code>ReplaceInstancesDataWithDefaultInstanceData(...)</code>: Utility for resetting instance data.</li>
+</ul>
+<hr />
+<h2 id="data-asset-integration">Data Asset Integration</h2>
+<ul>
+<li><code>bUseDataAsset</code>: If true, uses external asset definitions.</li>
+<li><code>DataAsset</code>: Source asset that includes instance definitions.</li>
+<li><code>GenerateInstancesFromAssets()</code>: Populates instance data from asset.</li>
+</ul>
+<hr />
+<h2 id="editor-only-debug-tools">Editor-Only &amp; Debug Tools</h2>
+<ul>
+<li><code>PostEditChangeProperty(...)</code>: Used in editor to respond to property changes.</li>
+<li><code>bShowArea</code>: Toggles wireframe visibility.</li>
+<li><code>ManualTransformsCache</code>, <code>ArrayTypeCache</code>: Cached data for editor rebuilds.</li>
+</ul>
+<hr />
+<h2 id="additional-notes">Additional Notes</h2>
+<ul>
+<li>This actor class is part of <strong>Purpleprint - Placer</strong> by <a href="https://www.hevedy.com/purpleprint/">Hevedy</a>.</li>
+<li>Designed to support procedural workflows with maximum flexibility in editor.</li>
 </ul>
 
 
