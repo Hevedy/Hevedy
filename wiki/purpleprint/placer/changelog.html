@@ -2298,6 +2298,10 @@
 <h3 id="210-20250812">2.1.0 (2025/08/12)</h3>
 <h4 id="new">New</h4>
 <ul>
+<li>Added traces from origin for Smart Field.</li>
+<li>Added traces from spline closest point for Smart Spline.</li>
+<li>Added scatter for external actors.</li>
+<li>Added scatter filtering per component.</li>
 <li>New container system on master actor, allow any kind of sub purple actor.</li>
 <li>Added instances pusher from children to parent. (EXPERIMENTAL NOT ENABLED)</li>
 <li>Added instances sharer on self actor. (EXPERIMENTAL)(Disabled by Default)</li>
@@ -2308,11 +2312,15 @@
 <li>Added random per child instance setter for purple actors. (Disabled by Default)</li>
 <li>New components comparator.</li>
 <li>Added Examples models, materials and textures.</li>
+<li>Added example map basic overall version.</li>
+<li>Added perf test map.</li>
+<li>Added origin to the data storage, makes it heavier but allows more options.</li>
 </ul>
 <h4 id="changes">Changes</h4>
 <ul>
 <li>Complete instances processor rework to support pusher and sub instances.</li>
 <li>Complete split for component creation and exposed blueprint functions.</li>
+<li>Complete rework on tracing system allowing some custom vars.</li>
 <li>Filter child actors in case they are incorrect.</li>
 <li>Options loader changed so it don't ignore some options.</li>
 <li>Port all the names to the new ones so is more clear.</li>
@@ -2330,6 +2338,7 @@
 <li>Missing elements randomly in the viewer.</li>
 <li>Crash on specific indexes for Field actor.</li>
 <li>Ghost actors because manual system.</li>
+<li>Added a locker for spliner copy index.</li>
 </ul>
 <h4 id="minor-changes">Minor Changes</h4>
 <ul>
